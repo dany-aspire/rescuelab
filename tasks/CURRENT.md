@@ -1,24 +1,37 @@
 # Current Task
 
-## RescueLab Phase 1 — known-good baseline
+## RL-001 — Production frontend cannot use the API
 
-Status: Complete
+Status: REVIEWED
 
-Build and verify a small React/Vite + Express + PostgreSQL application using Docker Compose. Establish the healthy reference state before introducing any training failures.
+- Repository: `dany-aspire/rescuelab`
+- Branch: `incident/rl-001`
+- Healthy reference: `main`
+- Suggested worktree: `/home/dan/rescuelab-worktrees/rl-001`
+- Ticket: `tasks/incidents/RL-001.md`
+- Final report: `docs/incidents/RL-001-report.md`
 
-### Completion criteria
+## Completed work
 
-- Backend automated tests pass.
-- Frontend production build succeeds.
-- Compose configuration is valid.
-- Full stack starts on the learner's CachyOS laptop.
-- `/api/health` reports that PostgreSQL is connected.
-- An incident can be created and then listed in the UI.
+The production failure was reproduced from runtime behaviour without comparing
+against `main` or inspecting the incident-creation diff. The frontend build used
+an API prefix that did not match the Nginx proxy. After learner approval, the
+frontend build argument was aligned with `/api`.
 
-### Next learner action
+Verification completed on 2026-08-23:
 
-Use this verified Phase 1 branch as the healthy reference state. Introduce training failures only in a later phase or separate branch.
+- Backend tests passed.
+- Frontend production build passed.
+- Docker Compose configuration passed.
+- The complete production-style stack became healthy without deleting volumes.
+- The proxied health endpoint returned HTTP 200 JSON.
+- The browser reported **All systems operational** and listed existing incidents.
+- Browser incident creation returned HTTP 201.
+- The created incident remained visible after refresh.
 
-### Verification
+See `docs/incidents/RL-001-report.md` for diagnosis, repair, commands, and evidence.
+The incident branch is ready for review and has not been merged into `main`.
 
-The backend tests, frontend production build, Compose validation, complete Docker stack, database-connected health endpoint, incident listing, and browser create/refresh persistence workflow all passed on 2026-08-23. See `docs/baseline-verification.md` for commands and evidence.
+## ChatGPT Work review
+
+Accepted on 2026-08-23. The pushed repair matches the designed incident, changes only the intended production API-prefix configuration, and includes complete regression, runtime, browser, and persistence evidence. Awaiting the learner's explicit merge decision.
