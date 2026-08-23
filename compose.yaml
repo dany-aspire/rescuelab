@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-rescuelab}
+      POSTGRES_USER: ${POSTGRES_USER:-rescuelab}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/sql/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-rescuelab} -d ${POSTGRES_DB:-rescuelab}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      NODE_ENV: production
+      PORT: ${API_PORT:-3000}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://rescuelab:change-me@db:5432/rescuelab}
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "healthcheck.js"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/api}
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
