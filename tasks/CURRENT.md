@@ -2,7 +2,7 @@
 
 ## RL-001 — Production frontend cannot use the API
 
-Status: FIX_VERIFIED
+Status: REVIEWED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-001`
@@ -31,3 +31,7 @@ Verification completed on 2026-08-23:
 
 See `docs/incidents/RL-001-report.md` for diagnosis, repair, commands, and evidence.
 The incident branch is ready for review and has not been merged into `main`.
+
+## ChatGPT Work review
+
+Accepted on 2026-08-23. The pushed repair matches the designed incident, changes only the intended production API-prefix configuration, and includes complete regression, runtime, browser, and persistence evidence. Awaiting the learner's explicit merge decision.

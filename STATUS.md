@@ -5,5 +5,5 @@
 - Public portfolio repository: active.
 - Current learning stage: first controlled incident verified.
 - Active incident: RL-001 on `incident/rl-001`.
-- Incident state: FIX_VERIFIED; awaiting review and explicit merge decision.
-- Completed incidents: RL-001 verified on its incident branch, not merged.
+- Incident state: REVIEWED; awaiting explicit merge decision.
+- Completed incidents: RL-001 reviewed and accepted on its incident branch, not merged.

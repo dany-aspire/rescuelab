@@ -2,7 +2,7 @@
 
 ## Status
 
-`FIX_VERIFIED` on `incident/rl-001` on 2026-08-23. The incident branch has not
+`REVIEWED` on `incident/rl-001` on 2026-08-23. The incident branch has not
 been merged into `main`.
 
 ## Customer symptom
@@ -120,6 +120,11 @@ Refresh persistence:
 - `GET /api/health` and `GET /api/incidents` succeeded.
 - The UI still showed 4 incidents, including the new record.
 - A direct final `GET /api/incidents` also returned the persisted record as ID 4.
+
+
+## ChatGPT Work review
+
+Accepted. Commit `20eaeeec5e72c61480669fbfcbb28b3dd13e6b9b` contains the intended minimal repair, the reported evidence satisfies every ticket acceptance criterion, and no unrelated application change was introduced. The branch remains unmerged pending the learner's decision.
 
 ## Remaining limitations
 
