@@ -2,7 +2,7 @@
 
 ## RL-002 — API exits during production startup
 
-Status: READY_FOR_DIAGNOSIS
+Status: REPAIR_APPROVED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-002`
@@ -10,12 +10,14 @@ Status: READY_FOR_DIAGNOSIS
 - Suggested worktree: `/home/dan/rescuelab-worktrees/rl-002`
 - Ticket: `tasks/incidents/RL-002.md`
 - Diagnosis artifact: `docs/incidents/RL-002-diagnosis.md`
-- Final report after approval: `docs/incidents/RL-002-report.md`
+- Final report: `docs/incidents/RL-002-report.md`
 
 ## Required stage now
 
-Follow `AGENTS.md` and `handoffs/CURRENT.md`. Reproduce the incident with the production-style Docker Compose stack while preserving the existing PostgreSQL volume.
+The learner approved the RL-002 repair after ChatGPT Work reviewed the diagnosis.
 
-Diagnose from container state, startup logs, resolved Compose configuration, application requirements, and safe runtime inspection. Do not compare with `main` or inspect the scenario-creation diff.
+Follow `AGENTS.md` and `handoffs/CURRENT.md`. Apply the smallest repair justified in `docs/incidents/RL-002-diagnosis.md`: explicitly supply the API's required `DATABASE_URL` through Compose using the repository's documented environment workflow, with a clear failure when the required value is missing.
 
-Before changing any application or configuration file, write the diagnosis artifact with the symptom, root cause, evidence, and smallest safe repair. Update the GitHub mailbox to hand control to ChatGPT Work, commit and push those documentation-only changes, and stop.
+Do not commit secrets or delete/reset the PostgreSQL volume. Run every acceptance check in `tasks/incidents/RL-002.md`, including backend tests, frontend build, Compose validation, full-stack health, existing-data loading, and browser creation/refresh persistence.
+
+Write `docs/incidents/RL-002-report.md`, update repository status accurately, then update the mailbox to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`. Commit and push only `incident/rl-002`, then stop.
