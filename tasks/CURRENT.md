@@ -2,7 +2,7 @@
 
 ## RL-001 — Production frontend cannot use the API
 
-Status: READY_FOR_DIAGNOSIS
+Status: FIX_VERIFIED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-001`
@@ -11,18 +11,23 @@ Status: READY_FOR_DIAGNOSIS
 - Ticket: `tasks/incidents/RL-001.md`
 - Final report: `docs/incidents/RL-001-report.md`
 
-## Required stage now
+## Completed work
 
-Read `AGENTS.md` and the ticket. Reproduce the incident from the assigned branch and gather evidence from the running production-style Docker Compose stack.
+The production failure was reproduced from runtime behaviour without comparing
+against `main` or inspecting the incident-creation diff. The frontend build used
+an API prefix that did not match the Nginx proxy. After learner approval, the
+frontend build argument was aligned with `/api`.
 
-Before changing any tracked or untracked application/configuration file:
+Verification completed on 2026-08-23:
 
-1. Explain the symptom.
-2. State the proposed root cause.
-3. Show the commands, logs, HTTP/browser evidence, and configuration evidence that support it.
-4. Propose the smallest safe repair.
-5. Stop and wait for the learner's explicit approval.
+- Backend tests passed.
+- Frontend production build passed.
+- Docker Compose configuration passed.
+- The complete production-style stack became healthy without deleting volumes.
+- The proxied health endpoint returned HTTP 200 JSON.
+- The browser reported **All systems operational** and listed existing incidents.
+- Browser incident creation returned HTTP 201.
+- The created incident remained visible after refresh.
 
-Do not inspect the incident-creation commit diff or compare this branch with `main` before the diagnosis gate. Do not merge, delete volumes, or modify the healthy reference.
-
-After approval, follow `AGENTS.md`, satisfy the ticket acceptance criteria, create the final report, set this status to `FIX_VERIFIED`, commit, and push only `incident/rl-001`.
+See `docs/incidents/RL-001-report.md` for diagnosis, repair, commands, and evidence.
+The incident branch is ready for review and has not been merged into `main`.
