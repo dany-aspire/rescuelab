@@ -1,24 +1,28 @@
 # Current Task
 
-## RescueLab Phase 1 — known-good baseline
+## RL-001 — Production frontend cannot use the API
 
-Status: Complete
+Status: READY_FOR_DIAGNOSIS
 
-Build and verify a small React/Vite + Express + PostgreSQL application using Docker Compose. Establish the healthy reference state before introducing any training failures.
+- Repository: `dany-aspire/rescuelab`
+- Branch: `incident/rl-001`
+- Healthy reference: `main`
+- Suggested worktree: `/home/dan/rescuelab-worktrees/rl-001`
+- Ticket: `tasks/incidents/RL-001.md`
+- Final report: `docs/incidents/RL-001-report.md`
 
-### Completion criteria
+## Required stage now
 
-- Backend automated tests pass.
-- Frontend production build succeeds.
-- Compose configuration is valid.
-- Full stack starts on the learner's CachyOS laptop.
-- `/api/health` reports that PostgreSQL is connected.
-- An incident can be created and then listed in the UI.
+Read `AGENTS.md` and the ticket. Reproduce the incident from the assigned branch and gather evidence from the running production-style Docker Compose stack.
 
-### Next learner action
+Before changing any tracked or untracked application/configuration file:
 
-Use this verified Phase 1 branch as the healthy reference state. Introduce training failures only in a later phase or separate branch.
+1. Explain the symptom.
+2. State the proposed root cause.
+3. Show the commands, logs, HTTP/browser evidence, and configuration evidence that support it.
+4. Propose the smallest safe repair.
+5. Stop and wait for the learner's explicit approval.
 
-### Verification
+Do not inspect the incident-creation commit diff or compare this branch with `main` before the diagnosis gate. Do not merge, delete volumes, or modify the healthy reference.
 
-The backend tests, frontend production build, Compose validation, complete Docker stack, database-connected health endpoint, incident listing, and browser create/refresh persistence workflow all passed on 2026-08-23. See `docs/baseline-verification.md` for commands and evidence.
+After approval, follow `AGENTS.md`, satisfy the ticket acceptance criteria, create the final report, set this status to `FIX_VERIFIED`, commit, and push only `incident/rl-001`.

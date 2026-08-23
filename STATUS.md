@@ -3,6 +3,7 @@
 - Healthy baseline: verified and preserved on `main`.
 - Baseline verification: complete.
 - Public portfolio repository: active.
-- Current learning stage: ready for the first controlled incident.
-- Active incident: see `tasks/CURRENT.md` on the assigned incident branch.
+- Current learning stage: first controlled incident.
+- Active incident: RL-001 on `incident/rl-001`.
+- Incident state: READY_FOR_DIAGNOSIS.
 - Completed incidents: none.
