@@ -2,8 +2,7 @@
 
 ## Status
 
-`REVIEWED` on `incident/rl-001` on 2026-08-23. The incident branch has not
-been merged into `main`.
+`MERGED` on 2026-08-23 through pull request #1. The incident branch remains preserved.
 
 ## Customer symptom
 
@@ -124,7 +123,7 @@ Refresh persistence:
 
 ## ChatGPT Work review
 
-Accepted. Commit `20eaeeec5e72c61480669fbfcbb28b3dd13e6b9b` contains the intended minimal repair, the reported evidence satisfies every ticket acceptance criterion, and no unrelated application change was introduced. The branch remains unmerged pending the learner's decision.
+Accepted. Commit `20eaeeec5e72c61480669fbfcbb28b3dd13e6b9b` contains the intended minimal repair, the reported evidence satisfies every ticket acceptance criterion, and no unrelated application change was introduced. The learner approved the merge. Pull request #1 was merged as `e42ae7069cd52f0c9cc7387600d4d2bd679b73ae`.
 
 ## Remaining limitations
 
@@ -134,5 +133,4 @@ Accepted. Commit `20eaeeec5e72c61480669fbfcbb28b3dd13e6b9b` contains the intende
   placeholders and must be overridden outside local development.
 - npm reported that the esbuild install script was not allowlisted by the local
   npm policy; the production Vite build nevertheless completed successfully.
-- The verified repair remains only on `incident/rl-001` until reviewed and
-  explicitly merged. No merge was performed.
+- The reviewed repair and incident documentation are now preserved on `main`.

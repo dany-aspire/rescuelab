@@ -1,28 +1,49 @@
-# RescueLab Handoff Procedure
+# GitHub-Native RescueLab Handoff
 
-GitHub is the persistent bridge between ChatGPT Work and local Codex. Full chat transcripts are not synchronized.
+GitHub is the only persistent communication bridge between ChatGPT Work and local Codex. Uploading, downloading, or copying a `HANDOFF.md` file is not part of the workflow.
 
-## Roles
+## Canonical files
 
-- ChatGPT Work designs one bounded incident, creates its branch and customer-style ticket, and retains the hidden root cause.
-- The learner launches local Codex, reviews its reasoning, and approves or rejects the proposed repair.
-- Local Codex reproduces, diagnoses, pauses for approval, then fixes, verifies, documents, commits, and pushes.
-- ChatGPT Work reviews the pushed evidence against the intended incident before closing it.
+- `handoffs/CURRENT.md`: compact mailbox containing sequence, state, branch, next actor, and pointers.
+- `tasks/CURRENT.md`: the active assignment and stage requirements.
+- `tasks/incidents/RL-NNN.md`: customer-visible ticket without the hidden root cause.
+- `docs/incidents/RL-NNN-diagnosis.md`: Codex's pre-repair evidence and proposed fix.
+- `docs/incidents/RL-NNN-report.md`: final repair and verification evidence.
+- `reviews/RL-NNN.md`: ChatGPT Work's independent review.
+- `STATUS.md`: portfolio progress.
+- `tasks/BACKLOG.md`: ordered exercises.
 
-## Repository contract
+## Actors
 
-- `main`: verified healthy reference.
-- `incident/rl-NNN`: isolated broken scenario.
-- `tasks/CURRENT.md`: one active assignment on the incident branch.
-- `tasks/incidents/RL-NNN.md`: customer-visible ticket without the hidden answer.
-- `docs/incidents/RL-NNN-report.md`: Codex's diagnosis, repair, and verification evidence.
-- `tasks/BACKLOG.md`: ordered future exercises.
-- `STATUS.md`: concise portfolio progress.
+- `CHATGPT_WORK`: designs incidents, reviews diagnosis/results, records approvals, and prepares merge decisions.
+- `LOCAL_CODEX`: reproduces, diagnoses, documents, repairs only after approval, verifies, commits, and pushes.
+- `LEARNER`: supervises reasoning and gives explicit repair and merge approval in ChatGPT Work.
 
-## State flow
+An agent acts only when named by `Next actor`.
 
-`READY_FOR_DIAGNOSIS` → `DIAGNOSIS_PROPOSED` → `FIX_VERIFIED` → `REVIEWED`
+## State machine
 
-Codex must stop after proposing its evidence-backed diagnosis. The learner's approval is required before the repair stage.
+`IDLE`
+→ `READY_FOR_DIAGNOSIS`
+→ `DIAGNOSIS_PROPOSED`
+→ `REPAIR_APPROVED`
+→ `FIX_VERIFIED`
+→ `REVIEWED`
+→ `MERGED`
+→ `IDLE`
 
-When Codex finishes and pushes, the learner only needs to tell ChatGPT Work that the incident is finished. Work reads the repository directly and performs the review.
+Every handoff update increments `Sequence`, names the writer and next actor, and points to durable evidence. Detailed evidence belongs in diagnosis, report, or review files rather than bloating the mailbox.
+
+## Operating loop
+
+1. Work creates the incident branch, ticket, task, and mailbox entry; next actor becomes Codex.
+2. The learner tells Codex: `Check and follow the GitHub handoff.`
+3. Codex diagnoses, writes and pushes the diagnosis, hands control to Work, and stops.
+4. The learner tells Work: `Check the GitHub handoff.`
+5. Work reviews the diagnosis and asks the learner for repair approval.
+6. After approval, Work records `REPAIR_APPROVED` in GitHub and hands control to Codex.
+7. Codex repairs, verifies, writes the report, pushes, hands control to Work, and stops.
+8. Work reviews the branch, writes its review, and asks the learner for merge approval.
+9. Work merges only after explicit approval, records `MERGED`, then returns the mailbox to `IDLE`.
+
+No transcript synchronization is required.
