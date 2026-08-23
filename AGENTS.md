@@ -2,6 +2,18 @@
 
 This repository is the durable communication channel between ChatGPT Work, the learner, and local Codex. Do not use an uploaded or local-only `HANDOFF.md` as project state.
 
+## Control keyword
+
+The standalone keyword `cfgh` means: check and follow the GitHub handoff.
+
+When `cfgh` is received:
+
+1. Run `git fetch origin --prune` when operating in a local checkout.
+2. Read the canonical `handoffs/CURRENT.md` from GitHub, then read the branch and task it names.
+3. If `Next actor` names the receiving agent, follow the current stage instructions.
+4. If another actor is named, report the current state and next actor, then stop.
+5. Do not infer work from an earlier transcript or treat `cfgh` as authorization to bypass diagnosis, repair, review, or merge gates.
+
 ## Startup procedure
 
 1. Run `git fetch origin --prune`.

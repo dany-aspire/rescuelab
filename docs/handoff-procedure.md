@@ -2,6 +2,12 @@
 
 GitHub is the only persistent communication bridge between ChatGPT Work and local Codex. Uploading, downloading, or copying a `HANDOFF.md` file is not part of the workflow.
 
+## Control keyword
+
+The learner sends the standalone keyword `cfgh` to either ChatGPT Work or local Codex. It expands to “check and follow the GitHub handoff.”
+
+The receiving agent reads the canonical mailbox and acts only when named by `Next actor`. Otherwise it reports the state and next actor and stops. The keyword does not grant repair or merge approval and never overrides a workflow gate.
+
 ## Canonical files
 
 - `handoffs/CURRENT.md`: compact mailbox containing sequence, state, branch, next actor, and pointers.
@@ -37,13 +43,13 @@ Every handoff update increments `Sequence`, names the writer and next actor, and
 ## Operating loop
 
 1. Work creates the incident branch, ticket, task, and mailbox entry; next actor becomes Codex.
-2. The learner tells Codex: `Check and follow the GitHub handoff.`
+2. The learner sends `cfgh` to Codex.
 3. Codex diagnoses, writes and pushes the diagnosis, hands control to Work, and stops.
-4. The learner tells Work: `Check the GitHub handoff.`
+4. The learner sends `cfgh` to Work.
 5. Work reviews the diagnosis and asks the learner for repair approval.
 6. After approval, Work records `REPAIR_APPROVED` in GitHub and hands control to Codex.
-7. Codex repairs, verifies, writes the report, pushes, hands control to Work, and stops.
-8. Work reviews the branch, writes its review, and asks the learner for merge approval.
+7. The learner sends `cfgh` to Codex; Codex repairs, verifies, writes the report, pushes, hands control to Work, and stops.
+8. The learner sends `cfgh` to Work; Work reviews the branch and asks the learner for merge approval.
 9. Work merges only after explicit approval, records `MERGED`, then returns the mailbox to `IDLE`.
 
 No transcript synchronization is required.
