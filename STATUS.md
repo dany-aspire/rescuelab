@@ -7,4 +7,4 @@
 - Current backlog: complete.
 - Active incident: none.
 - Workflow state: IDLE pending learner direction for the next RescueLab phase.
-- Coordination: GitHub-native handoff protocol with standing repair/merge authorization; use `cfgh`.
+- Coordination: GitHub-native Protocol 2 with the `CODEX_EXECUTOR` role, Codex cloud as the default execution surface, control-room issue #9, and standing repair/merge authorization; use `cfgh`.
