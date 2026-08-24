@@ -1,26 +1,28 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 16
-- State: IDLE
-- Incident: none
-- Branch: main
+- Sequence: 17
+- State: READY_FOR_DIAGNOSIS
+- Incident: RL-004
+- Branch: incident/rl-004
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
+- Next actor: LOCAL_CODEX
 - Updated: 2026-08-24
 - Control keyword: cfgh
-- Last completed incident: RL-003
-- Last pull request: https://github.com/dany-aspire/rescuelab/pull/3
-- Last merge commit: ebeb574ae526927a77a9e1155fad2d7af6f10c13
-- Next planned incident: RL-004
+- Base commit: 11c5c6a9938704c71d92ce9cb8072275a7eb1b01
+- Scenario commit: this branch root commit
 
 ## Instruction
 
-RL-003 is reviewed, merged, and recorded as complete. No local Codex action is currently requested. ChatGPT Work owns the next step: prepare RL-004 from the updated healthy `main` baseline.
+The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-## Evidence
+Create or reuse the worktree specified by `tasks/CURRENT.md`. Read `AGENTS.md`, the current task, and the customer ticket. Reproduce RL-004 as a clean production web-image build.
 
-- `docs/incidents/RL-003-diagnosis.md`
-- `docs/incidents/RL-003-report.md`
-- `reviews/RL-003.md`
-- Pull request: <https://github.com/dany-aspire/rescuelab/pull/3>
+Complete the diagnosis stage only. Do not change application or configuration files and do not delete or reset the PostgreSQL volume. Write the required diagnosis artifact, update this mailbox to `DIAGNOSIS_PROPOSED` with `Next actor: CHATGPT_WORK`, commit and push the documentation-only handoff, then stop.
+
+## Pointers
+
+- Task: `tasks/CURRENT.md`
+- Ticket: `tasks/incidents/RL-004.md`
+- Diagnosis artifact: `docs/incidents/RL-004-diagnosis.md`
+- Final report after approval: `docs/incidents/RL-004-report.md`
