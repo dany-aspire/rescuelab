@@ -1,16 +1,17 @@
 # Current Task
 
-Status: REVIEWED
+Status: ASSIGNED
 
-## P2-006 — Diagnosis-to-delivery playbook
+## P2-007 — Public QA and portfolio release
 
-The client-facing playbook and delivery-report template are complete and independently reviewed.
+Perform final public-content and technical QA, apply minimal packaging corrections, and prepare the first release.
 
-- Branch: `phase-2/p2-006`
-- Pull request: #17
-- Deliverables: `docs/delivery-playbook.md`, `templates/delivery-report.md`
-- Review: `reviews/P2-006.md`
-- Decision: approved under the learner's standing merge authorization
-- Application changes: none
-
-After merge, ChatGPT Work must immediately prepare P2-007 and route it to Codex cloud.
+- Actor: `CODEX_EXECUTOR`
+- Execution surface: `CODEX_CLOUD`
+- Branch: `phase-2/p2-007`
+- Task: `tasks/phase-2/P2-007.md`
+- Primary deliverable: `docs/public-qa.md`
+- Application behavior changes: not authorized
+- Merge owner: `CHATGPT_WORK`
+- Release owner: `CHATGPT_WORK` after merge and final-head CI
+- Delivery: complete file contents and explicit deletion list in PR #18
