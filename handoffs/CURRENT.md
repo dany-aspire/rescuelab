@@ -1,37 +1,43 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 71
-- State: RELEASE_CANDIDATE
+- Sequence: 72
+- State: IDLE
 - Incident: none
-- Task: v1.0.0 finalization
+- Task: none
 - Branch: main
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
+- Next actor: LEARNER
 - Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
 - Last completed task: P2-007
-- Last merge PR: #18
-- Last merge commit: 5a3da3324d32d2f8668720e5abccae902b7a635d
-- Continuation: final main CI, tag and release v1.0.0, then IDLE
+- Last merge PR: #19
+- Last merge commit: 184c12439ae010d7fc199a99a7e57ea550b033e1
+- Release: v1.0.0
+- Continuation: none; define fresh scope before new work
 - Authorization: standing repair and merge authorization
 - Executor preference: Codex cloud for all tasks until learner changes it
 - Update preference: post regular progress updates in ChatGPT Work
 
 ## Instruction
 
-Phase 2 is complete and merged. Require the full workflow to pass on this exact
-`main` release-candidate revision. If it passes, create tag and GitHub release
-`v1.0.0` from the reviewed factual notes, then record RELEASED and IDLE.
-If the workflow fails or the release target moves, stop and report the blocker.
+RescueLab Phase 1, RL-001 through RL-008, and Phase 2, P2-001 through
+P2-007, are complete. Release `v1.0.0` is published from the independently
+verified release tree at
+`184c12439ae010d7fc199a99a7e57ea550b033e1`.
+
+No work is currently assigned. A future phase must define fresh scope,
+acceptance checks, review ownership, and execution authority before repository
+changes begin.
 
 ## Pointers
 
+- Release: `v1.0.0`
+- Release notes: `docs/release-notes-v1.0.0.md`
 - Public QA: `docs/public-qa.md`
 - Status: `STATUS.md`
 - Backlog: `tasks/BACKLOG.md`
 - Current task: `tasks/CURRENT.md`
-- Final Phase 2 PR: #18
 - Control room: GitHub issue #9
