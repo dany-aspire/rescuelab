@@ -1,22 +1,11 @@
 # Current Task
 
-## RL-004 — Production web-image build failure
+No incident is active during automatic continuation.
 
-Status: FIX_VERIFIED
+- Status: PREPARING_NEXT
+- Healthy branch: `main`
+- Last completed incident: RL-004
+- Last merge commit: `0d0a686492cab7ae7ebe74fa7a09d48996fa0591`
+- Next incident: RL-005
 
-- Repository: `dany-aspire/rescuelab`
-- Branch: `incident/rl-004`
-- Healthy reference: `main`
-- Suggested worktree: `/home/dan/rescuelab-worktrees/rl-004`
-- Ticket: `tasks/incidents/RL-004.md`
-- Diagnosis artifact: `docs/incidents/RL-004-diagnosis.md`
-- Final report: `docs/incidents/RL-004-report.md`
-
-## Required stage now
-
-Local Codex applied the approved Dockerfile instruction-order repair and verified
-every acceptance criterion. See `docs/incidents/RL-004-report.md` for the
-complete evidence.
-
-ChatGPT Work should review the repair and verification on `incident/rl-004`.
-Do not merge until the learner explicitly approves it through ChatGPT Work.
+ChatGPT Work is preparing RL-005. Local Codex should not begin work until the canonical router and active branch mailbox name `LOCAL_CODEX` as the next actor.
