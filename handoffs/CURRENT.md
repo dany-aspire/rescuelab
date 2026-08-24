@@ -1,8 +1,8 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 35
-- State: READY_FOR_DIAGNOSIS
+- Sequence: 37
+- State: REPAIR_APPROVED
 - Incident: RL-007
 - Branch: incident/rl-007
 - Written by: CHATGPT_WORK
@@ -19,9 +19,10 @@
 This file on `main` is the canonical handoff router. RL-007 is active on
 `incident/rl-007`.
 
-Local Codex should read the active branch mailbox, `tasks/CURRENT.md`, and the
-customer ticket, reproduce the split-origin browser failure, write an
-evidence-based diagnosis, and hand control back as `DIAGNOSIS_PROPOSED`.
+ChatGPT Work accepted the diagnosis and automatically recorded repair approval.
+Local Codex should read the active branch mailbox and `tasks/CURRENT.md`,
+apply the approved minimal repair, verify it across the split origins, write the
+final report, and hand control back as `FIX_VERIFIED`.
 
 Do not modify or merge `main`.
 
@@ -29,5 +30,4 @@ Do not modify or merge `main`.
 
 - Active branch: `incident/rl-007`
 - Active mailbox: `incident/rl-007:handoffs/CURRENT.md`
-- Task: `incident/rl-007:tasks/CURRENT.md`
-- Ticket: `incident/rl-007:tasks/incidents/RL-007.md`
+- Diagnosis: `incident/rl-007:docs/incidents/RL-007-diagnosis.md`
