@@ -2,7 +2,7 @@
 
 ## RL-008 — Deployment-specific process or port-binding failure
 
-Status: READY_FOR_DIAGNOSIS
+Status: DIAGNOSIS_PROPOSED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-008`
@@ -14,15 +14,10 @@ Status: READY_FOR_DIAGNOSIS
 
 ## Required stage now
 
-Local Codex must reproduce the production gateway failure, gather runtime and
-network evidence, identify the root cause, and propose the smallest safe repair.
+Local Codex reproduced the production gateway failure and proposed an
+evidence-based diagnosis in `docs/incidents/RL-008-diagnosis.md`. No application
+or configuration repair has been applied.
 
-Before changing application or configuration files:
-
-1. Follow the reproduction and constraints in the customer ticket.
-2. Record the evidence and proposed repair in
-   `docs/incidents/RL-008-diagnosis.md`.
-3. Advance `handoffs/CURRENT.md` to `DIAGNOSIS_PROPOSED` with
-   `Next actor: CHATGPT_WORK`.
-4. Commit and push only the diagnosis and handoff documentation, then stop.
-5. End the local response with: “Next step: send `cfgh` to ChatGPT Work.”
+ChatGPT Work should review the diagnosis. Repair requires a new
+`REPAIR_APPROVED` handoff naming `LOCAL_CODEX` as next actor under the standing
+authorization workflow.

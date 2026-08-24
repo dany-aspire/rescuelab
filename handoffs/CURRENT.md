@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 41
-- State: READY_FOR_DIAGNOSIS
+- Sequence: 42
+- State: DIAGNOSIS_PROPOSED
 - Incident: RL-008
 - Branch: incident/rl-008
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 13931780f227651558cca862b36edeef3f1e9c1f
@@ -17,17 +17,16 @@
 
 ## Instruction
 
-RL-008 is ready for evidence-based diagnosis on `incident/rl-008`. Reproduce
-the customer-visible production gateway failure using the ticket and
-production-style Compose stack. Diagnose from runtime, socket, network, HTTP,
-log, and configuration evidence before changing application or configuration
-files.
+The production gateway failure is reproduced and diagnosed without changing
+application or configuration files. The API binds only to its container's
+loopback interface: its loopback health check succeeds, but Nginx and even the
+API container's own Compose-network address receive connection refusals on port
+3000. Compose DNS and the Nginx upstream target are correct.
 
-Write the diagnosis artifact, advance this mailbox to `DIAGNOSIS_PROPOSED`
-with `Next actor: CHATGPT_WORK`, commit and push the documentation-only
-handoff, then stop.
-
-End the local response with: “Next step: send `cfgh` to ChatGPT Work.”
+Review `docs/incidents/RL-008-diagnosis.md` and the proposed smallest repair:
+change only the API listen host from `127.0.0.1` to `0.0.0.0`. The existing
+PostgreSQL volume and all ten records were preserved. No repair has been
+applied.
 
 ## Pointers
 
