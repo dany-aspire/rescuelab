@@ -1,42 +1,39 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 48
-- State: IDLE
+- Sequence: 49
+- State: PHASE_2_DEFINED
 - Incident: none
-- Branch: main
+- Task: Phase 2 definition
+- Branch: phase-2/definition
 - Written by: CHATGPT_WORK
-- Next actor: LEARNER
+- Next actor: CHATGPT_WORK
 - Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
 - Last completed incident: RL-008
-- Last merge PR: #8
-- Last merge commit: 167bf86cbe6b2a58357b663a6706281a08b6b724
-- Continuation: paused — current backlog complete
+- Last merge PR: #10
+- Last merge commit: c2a8687911ee16c35a644c8cfdacf556c28c89a5
+- Continuation: automatic to P2-001 after reviewed merge
 - Authorization: standing repair and merge authorization
 
 ## Instruction
 
-The complete RL-001 through RL-008 backlog has been diagnosed, repaired,
-independently reviewed, and merged. No incident is active and no Codex executor
-action is authorized.
+Phase 2 is defined as portfolio and client readiness. The seven-task backlog,
+scope boundary, quality gates, and exit criteria are recorded in
+`docs/PHASE-2.md` and `tasks/BACKLOG.md`.
 
-Protocol 2 uses the `CODEX_EXECUTOR` actor with a separately declared execution
-surface. Codex cloud is the default for future incidents; local Codex is reserved
-for work requiring the learner's exact machine or local-only environment.
-
-The learner may choose the next RescueLab phase, request a portfolio/release
-review, or authorize a new backlog. Until then, `cfgh` should report this
-`IDLE` state without modifying the repository.
+ChatGPT Work must independently review and merge the definition, create the
+P2-001 task branch and pull request, update the canonical router, and trigger
+Codex cloud through GitHub issue #9. No Codex executor work is authorized by
+this sequence.
 
 ## Pointers
 
-- Agent contract: `AGENTS.md`
-- Control room: GitHub issue #9
-- Status: `STATUS.md`
+- Phase definition: `docs/PHASE-2.md`
 - Backlog: `tasks/BACKLOG.md`
 - Current task: `tasks/CURRENT.md`
-- Final review: `reviews/RL-008.md`
-- Final report: `docs/incidents/RL-008-report.md`
+- Status: `STATUS.md`
+- Agent contract: `AGENTS.md`
+- Control room: GitHub issue #9
