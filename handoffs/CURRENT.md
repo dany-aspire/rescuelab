@@ -23,7 +23,7 @@
 
 ## Instruction
 
-P2-004 passed independent review and GitHub Actions run #32734653375 passed.
+P2-004 passed independent review and GitHub Actions run #32734847760 passed.
 Merge pull request #15 under the learner's standing authorization, then
 immediately prepare P2-005 and route it to Codex cloud.
 
@@ -36,6 +36,6 @@ immediately prepare P2-005 and route it to Codex cloud.
 - Smoke test: `scripts/smoke-test.sh`
 - Workflow: `.github/workflows/demo.yml`
 - Review: `reviews/P2-004.md`
-- Actions run: https://github.com/dany-aspire/rescuelab/actions/runs/32734653375
+- Actions run: https://github.com/dany-aspire/rescuelab/actions/runs/32734847760
 - Pull request: #15
 - Control room: GitHub issue #9
