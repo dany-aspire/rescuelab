@@ -1,17 +1,16 @@
 # Current Task
 
-Status: REVIEWED
+Status: ASSIGNED
 
-## P2-004 — Reproducible demonstration
+## P2-005 — Client intake and triage kit
 
-The clean-checkout demonstration and durable CI verification are complete and independently reviewed.
+Create a safe, reusable intake questionnaire, access checklist, and triage boundary for small deployment-rescue requests.
 
-- Branch: `phase-2/p2-004`
-- Pull request: #15
-- Deliverables: `docs/demo.md`, `scripts/smoke-test.sh`, `.github/workflows/demo.yml`
-- Review: `reviews/P2-004.md`
-- GitHub Actions run: #32734847760 — success
-- Decision: approved under the learner's standing merge authorization
-- Application behavior changes: none
-
-After merge, ChatGPT Work must immediately prepare P2-005 and route it to Codex cloud.
+- Actor: `CODEX_EXECUTOR`
+- Execution surface: `CODEX_CLOUD`
+- Branch: `phase-2/p2-005`
+- Task: `tasks/phase-2/P2-005.md`
+- Deliverables: `docs/client-intake.md`, `templates/client-intake.md`
+- Application changes: not authorized
+- Merge owner: `CHATGPT_WORK`
+- Delivery: complete file contents in PR #16; no Git push required
