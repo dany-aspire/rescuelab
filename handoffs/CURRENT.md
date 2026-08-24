@@ -1,33 +1,31 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 31
-- State: REPAIR_APPROVED
+- Sequence: 33
+- State: REVIEWED
 - Incident: RL-006
 - Branch: incident/rl-006
 - Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
-- Last completed incident: RL-005
-- Active handoff: incident/rl-006:handoffs/CURRENT.md
-- Continuation: automatic
+- Base commit: f37a3e7f843a1509155331044cea871ea7a39a1f
+- Repair commit: c4db7b84b62589d711a4f8f39d0fe18b94c5b6f2
+- Continuation: automatic to RL-007
 - Authorization: standing repair and merge authorization
 
 ## Instruction
 
-This file on `main` is the canonical handoff router. RL-006 is active on
-`incident/rl-006`.
+The independent review in `reviews/RL-006.md` approves the minimal Nginx
+path-preservation repair and its verification evidence. ChatGPT Work is
+authorized to merge RL-006 automatically and then prepare RL-007.
 
-ChatGPT Work accepted the diagnosis and automatically recorded repair approval
-under the learner's standing authorization. Local Codex should read the active
-branch mailbox and `tasks/CURRENT.md`, apply the approved minimal repair,
-verify it, write the final report, and hand control back as `FIX_VERIFIED`.
+No local Codex action is authorized at this stage.
 
-Do not modify or merge `main`.
+## Pointers
 
-## Pointer
-
-- Active branch: `incident/rl-006`
-- Active mailbox: `incident/rl-006:handoffs/CURRENT.md`
-- Diagnosis: `incident/rl-006:docs/incidents/RL-006-diagnosis.md`
+- Task: `tasks/CURRENT.md`
+- Ticket: `tasks/incidents/RL-006.md`
+- Diagnosis artifact: `docs/incidents/RL-006-diagnosis.md`
+- Final report: `docs/incidents/RL-006-report.md`
+- Independent review: `reviews/RL-006.md`
