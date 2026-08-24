@@ -19,8 +19,9 @@
 4. [x] P2-004 — Validate and document a reproducible demonstration.
 5. [x] P2-005 — Create the client intake and triage kit.
 6. [x] P2-006 — Create the diagnosis-to-delivery playbook.
-7. [ ] P2-007 — Complete public-content QA and prepare the portfolio release.
+7. [x] P2-007 — Complete public-content QA and prepare the portfolio release.
 
-Phase 2 is defined in `docs/PHASE-2.md`. ChatGPT Work advances to the next
-unchecked task after each reviewed merge. Exact incident injection details from
-Phase 1 remain documented only in their existing artifacts and history.
+Phase 2 is defined in `docs/PHASE-2.md`. All Phase 2 tasks are reviewed. Release and IDLE follow only after PR #18 is
+merged, the final `main` workflow passes, and `v1.0.0` is created. Exact incident
+injection details from Phase 1 remain documented only in their existing
+artifacts and history.

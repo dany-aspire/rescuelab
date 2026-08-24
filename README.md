@@ -6,10 +6,24 @@ applications. It contains a working example application and eight deliberately
 introduced exercises. They are not client engagements or live-production
 incidents.
 
-Start with the [incident case studies](docs/case-studies.md) for the complete
-ticket-to-review evidence chains, or read the
-[portfolio evidence audit](docs/portfolio-audit.md) for a claim-by-claim account
-of what the repository does and does not establish.
+## Explore the portfolio
+
+- [Incident case studies](docs/case-studies.md) — the eight complete
+  ticket-to-review evidence chains.
+- [Portfolio evidence audit](docs/portfolio-audit.md) — a claim-by-claim account
+  of what the repository does and does not establish.
+- [Reproducible demonstration](docs/demo.md) — clean-checkout checks for the
+  application, Compose topology, public HTTP path, and database persistence.
+- [GitHub Actions demonstration](.github/workflows/demo.yml) — the automated
+  workflow that runs the repository and Docker-backed demonstration checks.
+- [Client intake and triage guide](docs/client-intake.md) and
+  [reusable intake template](templates/client-intake.md) — safe evidence,
+  access, scope, and escalation practices.
+- [Diagnosis-to-delivery playbook](docs/delivery-playbook.md) and
+  [reusable delivery report](templates/delivery-report.md) — the staged repair,
+  approval, verification, rollback, and closure process.
+- [Scope and limitations](#scope-and-limitations) — explicit boundaries on what
+  this training portfolio establishes.
 
 ## What is here
 
@@ -68,6 +82,9 @@ These automated checks are intentionally narrow: the API tests use a repository
 test double, the build checks compilation, and there is no committed browser
 automation. The Compose and HTTP commands above provide additional local runtime
 checks, but they do not constitute continuous production monitoring.
+
+For the full clean-checkout and persistence procedure, see the
+[reproducible demonstration](docs/demo.md).
 
 ## Evidence-first workflow
 

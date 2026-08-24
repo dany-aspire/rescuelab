@@ -2,18 +2,15 @@
 
 - Healthy baseline: verified on `main`.
 - Public portfolio repository: active.
-- Completed incidents: RL-001, RL-002, RL-003, RL-004, RL-005, RL-006, RL-007, RL-008.
-- RL-008: merged through PR #8 at `167bf86cbe6b2a58357b663a6706281a08b6b724`.
+- Completed incidents: RL-001 through RL-008.
 - Phase 1 incident backlog: complete.
-- Phase 2: defined — portfolio and client readiness.
-- Phase 2 progress: 6 of 7 tasks complete.
-- Completed Phase 2 tasks: P2-001 portfolio evidence audit.
-- Completed Phase 2 tasks: P2-001 portfolio evidence audit; P2-002 incident case-study index.
-- Completed Phase 2 tasks: P2-001 portfolio evidence audit; P2-002 incident case-study index; P2-003 client-facing README.
-- Completed Phase 2 tasks: P2-001 portfolio evidence audit; P2-002 incident case-study index; P2-003 client-facing README; P2-004 reproducible demonstration.
-- Completed Phase 2 tasks: P2-001 portfolio evidence audit; P2-002 incident case-study index; P2-003 client-facing README; P2-004 reproducible demonstration; P2-005 client intake and triage kit.
-- Completed Phase 2 tasks: P2-001 portfolio evidence audit; P2-002 incident case-study index; P2-003 client-facing README; P2-004 reproducible demonstration; P2-005 client intake and triage kit; P2-006 diagnosis-to-delivery playbook.
-- Current task: P2-007 public QA and portfolio release is assigned to Codex cloud.
+- Phase 2: portfolio and client readiness.
+- Phase 2 progress: 7 of 7 tasks reviewed.
+- Completed Phase 2 tasks: P2-001 through P2-007.
+- Current task: P2-007 passed independent review in PR #18.
+- Applied-proposal GitHub Actions run: #32737878549 — success.
+- Release state: pending exact-final-head CI, merge, final `main` CI, tag, and GitHub release.
+- Recommended release: `v1.0.0`.
 - Active incident: none.
-- Workflow state: P2-007 assigned.
-- Coordination: GitHub-native Protocol 2 with the `CODEX_EXECUTOR` role, Codex cloud as the default execution surface, control-room issue #9, and standing repair/merge authorization; use `cfgh`.
+- Workflow state: P2-007 independently reviewed and approved for merge after exact-head CI.
+- Coordination: GitHub-native Protocol 2; Codex cloud remains the preferred executor; standing repair/merge authorization remains active.
