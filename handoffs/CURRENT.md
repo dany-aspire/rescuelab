@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 31
-- State: REPAIR_APPROVED
+- Sequence: 32
+- State: FIX_VERIFIED
 - Incident: RL-006
 - Branch: incident/rl-006
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: f37a3e7f843a1509155331044cea871ea7a39a1f
@@ -16,15 +16,13 @@
 
 ## Instruction
 
-The diagnosis in `docs/incidents/RL-006-diagnosis.md` is accepted. Repair is
-approved under the learner's standing authorization.
+The approved Nginx path-preservation repair has been applied and every RL-006
+acceptance check passed. Direct API health and Nginx-proxied health both return
+HTTP 200 JSON, and all final browser verification passed through Nginx. The
+existing PostgreSQL volume and all prior records were preserved.
 
-Apply only the smallest justified repair: remove the trailing slash from the
-Nginx `proxy_pass` target so the `/api/` prefix is preserved. Run the ticket
-acceptance checks and relevant regressions without deleting or recreating the
-PostgreSQL volume. Write the final report, advance this mailbox to
-`FIX_VERIFIED` with `Next actor: CHATGPT_WORK`, commit and push the incident
-branch, then stop. Do not merge.
+Review `docs/incidents/RL-006-report.md` and the incident branch changes. The
+repair has not been merged into `main`.
 
 ## Pointers
 

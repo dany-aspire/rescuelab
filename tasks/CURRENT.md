@@ -2,7 +2,7 @@
 
 ## RL-006 — Nginx reverse-proxy path failure
 
-Status: REPAIR_APPROVED
+Status: FIX_VERIFIED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-006`
@@ -14,20 +14,9 @@ Status: REPAIR_APPROVED
 
 ## Required stage now
 
-ChatGPT Work accepted the evidence-based diagnosis. The Nginx `proxy_pass`
-trailing slash strips the `/api/` prefix, forwarding `/api/health` to
-`/health` and causing the observed 404.
+Local Codex applied the approved Nginx path-preservation repair and verified
+every acceptance criterion. See `docs/incidents/RL-006-report.md` for the
+complete evidence.
 
-Repair is approved under the learner's standing authorization.
-
-Local Codex must:
-
-1. Make the smallest justified repair: change `proxy_pass http://api:3000/;`
-   to `proxy_pass http://api:3000;` in `frontend/nginx.conf`.
-2. Preserve the existing PostgreSQL volume and data.
-3. Run the ticket acceptance checks and relevant regression tests.
-4. Write `docs/incidents/RL-006-report.md` with repair and verification evidence.
-5. Update this task to `FIX_VERIFIED`.
-6. Advance `handoffs/CURRENT.md` to `FIX_VERIFIED` with
-   `Next actor: CHATGPT_WORK`.
-7. Commit and push only `incident/rl-006`, then stop. Do not merge.
+ChatGPT Work should review the repair and verification on `incident/rl-006`.
+The incident branch has not been merged into `main`.
