@@ -2,7 +2,7 @@
 
 ## RL-008 — Deployment-specific process or port-binding failure
 
-Status: REPAIR_APPROVED
+Status: FIX_VERIFIED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-008`
@@ -14,22 +14,15 @@ Status: REPAIR_APPROVED
 
 ## Required stage now
 
-ChatGPT Work accepted the evidence-based diagnosis. The API listens only on its
-container loopback interface, so the local health check succeeds while Nginx
-receives connection refusals at the Compose-network address.
+Local Codex applied the approved one-line listen-host repair and verified all
+ticket acceptance criteria. The API now listens on its container interfaces at
+port 3000, the web container can reach it over the Compose network, and Nginx
+returns successful health, listing, and creation responses.
 
-Repair is approved under the learner's standing authorization.
+Backend tests, the frontend production build, Compose validation, image builds,
+runtime health, socket and network checks, browser creation, reload persistence,
+and preservation of all existing PostgreSQL data passed. Evidence is recorded
+in `docs/incidents/RL-008-report.md`.
 
-Local Codex must:
-
-1. Make the smallest justified repair: change only the API listen host from
-   `127.0.0.1` to `0.0.0.0`.
-2. Do not publish a new host port or bypass Nginx.
-3. Preserve the existing PostgreSQL volume and data.
-4. Run every ticket acceptance check and relevant regression test.
-5. Write `docs/incidents/RL-008-report.md` with repair and verification evidence.
-6. Update this task to `FIX_VERIFIED`.
-7. Advance `handoffs/CURRENT.md` to `FIX_VERIFIED` with
-   `Next actor: CHATGPT_WORK`.
-8. Commit and push only `incident/rl-008`, then stop. Do not merge.
-9. End the local response with: “Next step: send `cfgh` to ChatGPT Work.”
+ChatGPT Work must review the repair and verification evidence under the
+standing authorization. The incident branch has not been merged.

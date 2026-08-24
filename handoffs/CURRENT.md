@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 43
-- State: REPAIR_APPROVED
+- Sequence: 44
+- State: FIX_VERIFIED
 - Incident: RL-008
 - Branch: incident/rl-008
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 13931780f227651558cca862b36edeef3f1e9c1f
@@ -17,16 +17,17 @@
 
 ## Instruction
 
-The diagnosis in `docs/incidents/RL-008-diagnosis.md` is accepted. Repair is
-approved under the learner's standing authorization.
+The approved one-line API listen-host repair is applied and verified. The API
+now listens on `0.0.0.0:3000`; its loopback health check remains healthy, the
+web container reaches `api:3000`, and Nginx returns HTTP 200 JSON for health and
+incident listing. No API host port was published and Nginx was not bypassed.
 
-Apply only the API listen-host repair described in `tasks/CURRENT.md`. Do not
-publish an unnecessary host port or bypass Nginx. Run every acceptance check,
-preserve the PostgreSQL volume, write the final report, and advance this mailbox
-to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`.
-
-Commit and push only the incident branch, then stop. Do not merge. End the local
-response with: “Next step: send `cfgh` to ChatGPT Work.”
+All automated checks, Compose validation, image builds, socket and network
+checks, runtime health checks, and browser acceptance checks passed. The
+existing PostgreSQL volume and all ten prior records were preserved, and the
+browser-created eleventh record persisted after reload. Review the repair and
+`docs/incidents/RL-008-report.md` under the standing authorization. The incident
+branch has not been merged.
 
 ## Pointers
 
