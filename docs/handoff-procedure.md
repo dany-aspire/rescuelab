@@ -8,6 +8,12 @@ The learner sends the standalone keyword `cfgh` to either ChatGPT Work or local 
 
 The receiving agent reads the canonical mailbox and acts only when named by `Next actor`. Otherwise it reports the state and next actor and stops. The keyword does not grant repair or merge approval and never overrides a workflow gate.
 
+## Canonical router
+
+The `main` copy of `handoffs/CURRENT.md` is the canonical router. When an incident is active, it names the incident branch, state, sequence, and next actor. Detailed stage instructions live in the matching mailbox on the incident branch.
+
+ChatGPT Work may update only this router on `main` during an incident. Local Codex never modifies `main`.
+
 ## Canonical files
 
 - `handoffs/CURRENT.md`: compact mailbox containing sequence, state, branch, next actor, and pointers.
@@ -21,7 +27,7 @@ The receiving agent reads the canonical mailbox and acts only when named by `Nex
 
 ## Actors
 
-- `CHATGPT_WORK`: designs incidents, reviews diagnosis/results, records approvals, and prepares merge decisions.
+- `CHATGPT_WORK`: designs incidents, reviews diagnosis/results, records approvals, prepares merge decisions, and immediately prepares the next backlog incident after a completed merge.
 - `LOCAL_CODEX`: reproduces, diagnoses, documents, repairs only after approval, verifies, commits, and pushes.
 - `LEARNER`: supervises reasoning and gives explicit repair and merge approval in ChatGPT Work.
 
@@ -36,7 +42,9 @@ An agent acts only when named by `Next actor`.
 → `FIX_VERIFIED`
 → `REVIEWED`
 → `MERGED`
-→ `IDLE`
+→ next incident's `READY_FOR_DIAGNOSIS`
+
+`IDLE` is used only when the backlog has no next incident or continuation is intentionally paused.
 
 Every handoff update increments `Sequence`, names the writer and next actor, and points to durable evidence. Detailed evidence belongs in diagnosis, report, or review files rather than bloating the mailbox.
 
@@ -50,6 +58,7 @@ Every handoff update increments `Sequence`, names the writer and next actor, and
 6. After approval, Work records `REPAIR_APPROVED` in GitHub and hands control to Codex.
 7. The learner sends `cfgh` to Codex; Codex repairs, verifies, writes the report, pushes, hands control to Work, and stops.
 8. The learner sends `cfgh` to Work; Work reviews the branch and asks the learner for merge approval.
-9. Work merges only after explicit approval, records `MERGED`, then returns the mailbox to `IDLE`.
+9. Work merges only after explicit approval and records `MERGED`.
+10. Work immediately prepares the next unchecked backlog incident and routes the canonical mailbox to it. No separate “start next incident” message is needed.
 
 No transcript synchronization is required.
