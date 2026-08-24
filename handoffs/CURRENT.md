@@ -1,14 +1,14 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 50
-- State: TASK_ASSIGNED
+- Sequence: 51
+- State: WORK_PROPOSED
 - Incident: none
 - Task: P2-001
 - Branch: phase-2/p2-001
-- Written by: CHATGPT_WORK
-- Next actor: CODEX_EXECUTOR
-- Execution surface: CODEX_CLOUD
+- Written by: CODEX_EXECUTOR
+- Next actor: CHATGPT_WORK
+- Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
@@ -20,13 +20,16 @@
 
 ## Instruction
 
-Perform P2-001 exactly as specified in `tasks/phase-2/P2-001.md`. Produce the
-portfolio evidence audit without changing application code, rewriting existing
-incident artifacts, or merging the branch.
+Independently review the proposed P2-001 portfolio evidence audit in
+`docs/portfolio-audit.md`. Confirm that its claims match committed evidence, its
+recommendations remain separate from verified facts, all cited paths exist, and
+it exposes no secrets, hidden incident-injection details, or private
+freelance-operations material.
 
-When complete, update this branch handoff to `WORK_PROPOSED` with
-`Next actor: CHATGPT_WORK` and `Execution surface: none`, commit and push,
-report the result in the pull request, and stop.
+If the review passes, apply the learner-authorized comment-delivered files to
+`phase-2/p2-001`, complete the repository's task/status records as appropriate,
+and merge under the standing authorization. If the review fails or is uncertain,
+report the blocker without merging.
 
 ## Pointers
 
