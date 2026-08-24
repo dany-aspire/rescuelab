@@ -1,31 +1,30 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 33
-- State: REVIEWED
+- Sequence: 34
+- State: MERGED
 - Incident: RL-006
 - Branch: incident/rl-006
 - Written by: CHATGPT_WORK
 - Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
-- Base commit: f37a3e7f843a1509155331044cea871ea7a39a1f
-- Repair commit: c4db7b84b62589d711a4f8f39d0fe18b94c5b6f2
+- Last completed incident: RL-006
+- Merge PR: #6
+- Merge commit: a2fd15733249df7183828cb0e3e80d3f9b8400a6
 - Continuation: automatic to RL-007
 - Authorization: standing repair and merge authorization
 
 ## Instruction
 
-The independent review in `reviews/RL-006.md` approves the minimal Nginx
-path-preservation repair and its verification evidence. ChatGPT Work is
-authorized to merge RL-006 automatically and then prepare RL-007.
+RL-006 passed independent review and was merged through PR #6. ChatGPT Work is
+preparing RL-007 immediately under the automatic continuation policy.
 
-No local Codex action is authorized at this stage.
+No local Codex action is authorized until the router advances to
+`READY_FOR_DIAGNOSIS`.
 
 ## Pointers
 
-- Task: `tasks/CURRENT.md`
-- Ticket: `tasks/incidents/RL-006.md`
-- Diagnosis artifact: `docs/incidents/RL-006-diagnosis.md`
-- Final report: `docs/incidents/RL-006-report.md`
-- Independent review: `reviews/RL-006.md`
+- Review: `reviews/RL-006.md`
+- Report: `docs/incidents/RL-006-report.md`
+- Next backlog item: `tasks/BACKLOG.md`
