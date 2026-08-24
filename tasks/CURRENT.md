@@ -2,7 +2,7 @@
 
 ## RL-003 — PostgreSQL connection mismatch inside Docker Compose
 
-Status: DIAGNOSIS_PROPOSED
+Status: REPAIR_APPROVED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-003`
@@ -10,14 +10,15 @@ Status: DIAGNOSIS_PROPOSED
 - Suggested worktree: `/home/dan/rescuelab-worktrees/rl-003`
 - Ticket: `tasks/incidents/RL-003.md`
 - Diagnosis artifact: `docs/incidents/RL-003-diagnosis.md`
-- Final report after approval: `docs/incidents/RL-003-report.md`
+- Final report: `docs/incidents/RL-003-report.md`
 - Production overlay: `compose.production.yaml`
 
 ## Required stage now
 
-Local Codex reproduced the incident and proposed an evidence-based diagnosis in
-`docs/incidents/RL-003-diagnosis.md`. No application or configuration repair has
-been applied.
+The learner approved the RL-003 repair after ChatGPT Work reviewed the diagnosis.
 
-ChatGPT Work should review the diagnosis. Repair requires explicit learner
-approval and a new `REPAIR_APPROVED` handoff naming `LOCAL_CODEX` as next actor.
+Follow `AGENTS.md` and `handoffs/CURRENT.md`. Apply the smallest repair justified in `docs/incidents/RL-003-diagnosis.md`: remove only the production overlay host override that breaks Docker Compose service discovery. Keep the overlay valid; do not replace the service name with a fixed container IP.
+
+Do not expose or commit credentials and do not delete/reset the PostgreSQL volume. Run every acceptance check in `tasks/incidents/RL-003.md`, using the combined base and production Compose files.
+
+Write `docs/incidents/RL-003-report.md`, update repository status accurately, then update the branch mailbox to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`. Commit and push only `incident/rl-003`, then stop.
