@@ -1,16 +1,16 @@
 # Current Task
 
-Status: REVIEWED
+Status: ASSIGNED
 
-## P2-005 — Client intake and triage kit
+## P2-006 — Diagnosis-to-delivery playbook
 
-The client intake guide and copyable template are complete and independently reviewed.
+Create a client-facing engagement workflow and reusable delivery-report template.
 
-- Branch: `phase-2/p2-005`
-- Pull request: #16
-- Deliverables: `docs/client-intake.md`, `templates/client-intake.md`
-- Review: `reviews/P2-005.md`
-- Decision: approved under the learner's standing merge authorization
-- Application changes: none
-
-After merge, ChatGPT Work must immediately prepare P2-006 and route it to Codex cloud.
+- Actor: `CODEX_EXECUTOR`
+- Execution surface: `CODEX_CLOUD`
+- Branch: `phase-2/p2-006`
+- Task: `tasks/phase-2/P2-006.md`
+- Deliverables: `docs/delivery-playbook.md`, `templates/delivery-report.md`
+- Application changes: not authorized
+- Merge owner: `CHATGPT_WORK`
+- Delivery: complete file contents in PR #17; no Git push required
