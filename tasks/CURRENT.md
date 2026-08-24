@@ -1,23 +1,24 @@
 # Current Task
 
-## RL-007 — CORS failure in a split-origin deployment
+## RL-008 — Deployment-specific process or port-binding failure
 
 Status: REVIEWED
 
 - Repository: `dany-aspire/rescuelab`
-- Branch: `incident/rl-007`
+- Branch: `incident/rl-008`
 - Healthy reference: `main`
-- Ticket: `tasks/incidents/RL-007.md`
-- Diagnosis artifact: `docs/incidents/RL-007-diagnosis.md`
-- Final report: `docs/incidents/RL-007-report.md`
-- Independent review: `reviews/RL-007.md`
+- Ticket: `tasks/incidents/RL-008.md`
+- Diagnosis artifact: `docs/incidents/RL-008-diagnosis.md`
+- Final report: `docs/incidents/RL-008-report.md`
+- Independent review: `reviews/RL-008.md`
 
 ## Review result
 
-ChatGPT Work independently reviewed the sequence-38 repair and approved it. The
-runtime change is limited to the accepted one-value split-origin CORS repair,
-the exact-origin restriction remains intact, and the evidence satisfies every
-RL-007 acceptance criterion.
+ChatGPT Work independently reviewed the sequence-44 repair and approved it. The
+runtime change is limited to the accepted one-line listen-host repair, the API
+remains unexposed on the host, and the evidence satisfies every RL-008
+acceptance criterion.
 
-Merge is authorized under the learner's standing authorization. ChatGPT Work
-owns the merge and automatic continuation to RL-008.
+Merge is authorized under the learner's standing authorization. RL-008 is the
+last currently planned backlog incident, so ChatGPT Work will record completion
+and route the mailbox to `IDLE` after merging.
