@@ -10,7 +10,7 @@ The clean-checkout demonstration and durable CI verification are complete and in
 - Pull request: #15
 - Deliverables: `docs/demo.md`, `scripts/smoke-test.sh`, `.github/workflows/demo.yml`
 - Review: `reviews/P2-004.md`
-- GitHub Actions run: #32734653375 — success
+- GitHub Actions run: #32734847760 — success
 - Decision: approved under the learner's standing merge authorization
 - Application behavior changes: none
 
