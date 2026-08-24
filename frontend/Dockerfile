@@ -6,8 +6,8 @@ COPY package.json package-lock.json ./
 COPY backend/package.json ./backend/package.json
 COPY frontend/package.json ./frontend/package.json
 RUN npm ci --workspace=frontend --include-workspace-root=false
-RUN npm run build --workspace=frontend
 COPY frontend ./frontend
+RUN npm run build --workspace=frontend
 
 FROM nginx:1.29-alpine
 COPY frontend/nginx.conf /etc/nginx/conf.d/default.conf

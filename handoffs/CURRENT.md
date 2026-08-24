@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 19
-- State: REPAIR_APPROVED
+- Sequence: 20
+- State: FIX_VERIFIED
 - Incident: RL-004
 - Branch: incident/rl-004
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 11c5c6a9938704c71d92ce9cb8072275a7eb1b01
@@ -17,9 +17,14 @@
 
 The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-Repair is approved for the diagnosis documented in `docs/incidents/RL-004-diagnosis.md`. Apply the smallest justified Dockerfile instruction-order repair while preserving dependency-layer caching.
+The approved Dockerfile instruction-order repair has been applied and every
+RL-004 acceptance check passed, including the no-cache production web-image
+build and browser persistence verification. The existing PostgreSQL volume and
+all prior records were preserved.
 
-Run all ticket acceptance checks, including the clean web-image build and browser persistence check. Do not delete or reset the PostgreSQL volume. Write `docs/incidents/RL-004-report.md`, update repository status accurately, then update this mailbox to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`. Commit and push only `incident/rl-004`, and stop. Do not merge.
+Review `docs/incidents/RL-004-report.md` and the incident branch changes. The
+repair has not been merged into `main`; merge only after explicit learner
+approval.
 
 ## Pointers
 
