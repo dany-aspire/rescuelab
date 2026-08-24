@@ -1,31 +1,37 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 40
-- State: MERGED
-- Incident: RL-007
-- Branch: incident/rl-007
+- Sequence: 41
+- State: READY_FOR_DIAGNOSIS
+- Incident: RL-008
+- Branch: incident/rl-008
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
+- Next actor: LOCAL_CODEX
 - Updated: 2026-08-24
 - Control keyword: cfgh
+- Base commit: 13931780f227651558cca862b36edeef3f1e9c1f
+- Scenario commit: this branch root commit
 - Last completed incident: RL-007
-- Merge PR: #7
-- Merge commit: e8f1a7dfd3ea56b493ab713a5d6861179992743c
-- Continuation: automatic to RL-008
+- Continuation: automatic
 - Authorization: standing repair and merge authorization
 
 ## Instruction
 
-RL-007 passed independent review and was merged through PR #7. ChatGPT Work is
-preparing RL-008 immediately under the automatic continuation policy.
+RL-008 is ready for evidence-based diagnosis on `incident/rl-008`. Reproduce
+the customer-visible production gateway failure using the ticket and
+production-style Compose stack. Diagnose from runtime, socket, network, HTTP,
+log, and configuration evidence before changing application or configuration
+files.
 
-No local Codex action is authorized until the router advances to
-`READY_FOR_DIAGNOSIS`. If the learner sends `cfgh` locally, respond:
-“Next step: send `cfgh` to ChatGPT Work.”
+Write the diagnosis artifact, advance this mailbox to `DIAGNOSIS_PROPOSED`
+with `Next actor: CHATGPT_WORK`, commit and push the documentation-only
+handoff, then stop.
+
+End the local response with: “Next step: send `cfgh` to ChatGPT Work.”
 
 ## Pointers
 
-- Review: `reviews/RL-007.md`
-- Report: `docs/incidents/RL-007-report.md`
-- Next backlog item: `tasks/BACKLOG.md`
+- Task: `tasks/CURRENT.md`
+- Ticket: `tasks/incidents/RL-008.md`
+- Diagnosis artifact: `docs/incidents/RL-008-diagnosis.md`
+- Final report after approval: `docs/incidents/RL-008-report.md`
