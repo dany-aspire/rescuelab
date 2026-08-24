@@ -9,18 +9,24 @@
 - Next actor: LEARNER
 - Updated: 2026-08-24
 - Control keyword: cfgh
-- Last completed incident: RL-002
-- Active handoff: incident/rl-003:handoffs/CURRENT.md
+- Base commit: 1937d57dc7b86402df245b7e1ca0bb3ed61db6cb
+- Scenario commit: this branch root commit
+- Repair approval: learner approved
 - Review decision: approved for merge
 
 ## Instruction
 
-This file on `main` is the canonical handoff router. RL-003 is reviewed and approved for merge on `incident/rl-003`.
+The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-No agent may merge until the learner explicitly approves the RL-003 merge through ChatGPT Work. Local Codex has no authorized action.
+ChatGPT Work reviewed the repair, verification report, and branch scope. The repair is approved for merge. Read `reviews/RL-003.md` for the independent review.
 
-## Pointer
+No agent may merge until the learner explicitly approves the RL-003 merge through ChatGPT Work. After approval, ChatGPT Work will merge through GitHub, record the merge evidence, and return the canonical mailbox to `IDLE`.
 
-- Active branch: `incident/rl-003`
-- Active mailbox: `incident/rl-003:handoffs/CURRENT.md`
-- Review: `incident/rl-003:reviews/RL-003.md`
+## Pointers
+
+- Task: `tasks/CURRENT.md`
+- Ticket: `tasks/incidents/RL-003.md`
+- Diagnosis: `docs/incidents/RL-003-diagnosis.md`
+- Final report: `docs/incidents/RL-003-report.md`
+- Independent review: `reviews/RL-003.md`
+- Production overlay: `compose.production.yaml`
