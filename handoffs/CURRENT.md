@@ -1,14 +1,14 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 59
-- State: TASK_ASSIGNED
+- Sequence: 61
+- State: REVIEWED
 - Incident: none
 - Task: P2-004
 - Branch: phase-2/p2-004
 - Written by: CHATGPT_WORK
-- Next actor: CODEX_EXECUTOR
-- Execution surface: CODEX_CLOUD
+- Next actor: CHATGPT_WORK
+- Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
@@ -23,19 +23,19 @@
 
 ## Instruction
 
-Perform P2-004 exactly as specified in `tasks/phase-2/P2-004.md`. Produce a
-clean-checkout demonstration, smoke-test script, and GitHub Actions workflow.
-Do not change application behavior or historical incident artifacts.
-
-Use complete comment-based delivery in pull request #15. ChatGPT Work will apply
-the reviewed files and require the relevant GitHub Actions result before merge.
+P2-004 passed independent review and GitHub Actions run #32734847760 passed.
+Merge pull request #15 under the learner's standing authorization, then
+immediately prepare P2-005 and route it to Codex cloud.
 
 ## Pointers
 
 - Phase definition: `docs/PHASE-2.md`
 - Task: `tasks/phase-2/P2-004.md`
 - Current task: `tasks/CURRENT.md`
-- Audit: `docs/portfolio-audit.md`
-- README: `README.md`
+- Demonstration: `docs/demo.md`
+- Smoke test: `scripts/smoke-test.sh`
+- Workflow: `.github/workflows/demo.yml`
+- Review: `reviews/P2-004.md`
+- Actions run: https://github.com/dany-aspire/rescuelab/actions/runs/32734847760
 - Pull request: #15
 - Control room: GitHub issue #9
