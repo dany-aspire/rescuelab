@@ -2,7 +2,7 @@
 
 ## RL-005 — Docker API port-routing failure
 
-Status: DIAGNOSIS_PROPOSED
+Status: REPAIR_APPROVED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-005`
@@ -10,14 +10,15 @@ Status: DIAGNOSIS_PROPOSED
 - Suggested worktree: `/home/dan/rescuelab-worktrees/rl-005`
 - Ticket: `tasks/incidents/RL-005.md`
 - Diagnosis artifact: `docs/incidents/RL-005-diagnosis.md`
-- Final report after approval: `docs/incidents/RL-005-report.md`
+- Final report: `docs/incidents/RL-005-report.md`
 - Production overlay: `compose.production.yaml`
 
 ## Required stage now
 
-Local Codex reproduced the routing failure and proposed an evidence-based
-diagnosis in `docs/incidents/RL-005-diagnosis.md`. No application or
-configuration repair has been applied.
+The learner approved the RL-005 repair after ChatGPT Work reviewed the diagnosis.
 
-ChatGPT Work should review the diagnosis. Repair requires explicit learner
-approval and a new `REPAIR_APPROVED` handoff naming `LOCAL_CODEX` as next actor.
+Follow `AGENTS.md` and `handoffs/CURRENT.md`. Apply the smallest repair justified in `docs/incidents/RL-005-diagnosis.md`: align the production overlay's explicit API listening port with the documented Nginx upstream port.
+
+Do not expose or commit credentials and do not delete/reset the PostgreSQL volume. Run every acceptance check in `tasks/incidents/RL-005.md`, including direct and proxied health checks and browser persistence verification.
+
+Write `docs/incidents/RL-005-report.md`, update repository status accurately, then update the incident mailbox to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`. Commit and push only `incident/rl-005`, then stop.
