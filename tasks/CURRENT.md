@@ -2,27 +2,23 @@
 
 ## RL-008 — Deployment-specific process or port-binding failure
 
-Status: FIX_VERIFIED
+Status: REVIEWED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-008`
 - Healthy reference: `main`
-- Suggested worktree: `/home/dan/rescuelab-worktrees/rl-008`
 - Ticket: `tasks/incidents/RL-008.md`
 - Diagnosis artifact: `docs/incidents/RL-008-diagnosis.md`
 - Final report: `docs/incidents/RL-008-report.md`
+- Independent review: `reviews/RL-008.md`
 
-## Required stage now
+## Review result
 
-Local Codex applied the approved one-line listen-host repair and verified all
-ticket acceptance criteria. The API now listens on its container interfaces at
-port 3000, the web container can reach it over the Compose network, and Nginx
-returns successful health, listing, and creation responses.
+ChatGPT Work independently reviewed the sequence-44 repair and approved it. The
+runtime change is limited to the accepted one-line listen-host repair, the API
+remains unexposed on the host, and the evidence satisfies every RL-008
+acceptance criterion.
 
-Backend tests, the frontend production build, Compose validation, image builds,
-runtime health, socket and network checks, browser creation, reload persistence,
-and preservation of all existing PostgreSQL data passed. Evidence is recorded
-in `docs/incidents/RL-008-report.md`.
-
-ChatGPT Work must review the repair and verification evidence under the
-standing authorization. The incident branch has not been merged.
+Merge is authorized under the learner's standing authorization. RL-008 is the
+last currently planned backlog incident, so ChatGPT Work will record completion
+and route the mailbox to `IDLE` after merging.
