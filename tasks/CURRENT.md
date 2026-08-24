@@ -1,16 +1,16 @@
 # Current Task
 
-Status: ASSIGNED
+Status: REVIEWED
 
 ## P2-005 — Client intake and triage kit
 
-Create a safe, reusable intake questionnaire, access checklist, and triage boundary for small deployment-rescue requests.
+The client intake guide and copyable template are complete and independently reviewed.
 
-- Actor: `CODEX_EXECUTOR`
-- Execution surface: `CODEX_CLOUD`
 - Branch: `phase-2/p2-005`
-- Task: `tasks/phase-2/P2-005.md`
+- Pull request: #16
 - Deliverables: `docs/client-intake.md`, `templates/client-intake.md`
-- Application changes: not authorized
-- Merge owner: `CHATGPT_WORK`
-- Delivery: complete file contents in PR #16; no Git push required
+- Review: `reviews/P2-005.md`
+- Decision: approved under the learner's standing merge authorization
+- Application changes: none
+
+After merge, ChatGPT Work must immediately prepare P2-006 and route it to Codex cloud.

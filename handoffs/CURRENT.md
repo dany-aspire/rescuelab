@@ -1,14 +1,14 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 62
-- State: TASK_ASSIGNED
+- Sequence: 64
+- State: REVIEWED
 - Incident: none
 - Task: P2-005
 - Branch: phase-2/p2-005
 - Written by: CHATGPT_WORK
-- Next actor: CODEX_EXECUTOR
-- Execution surface: CODEX_CLOUD
+- Next actor: CHATGPT_WORK
+- Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
@@ -23,11 +23,20 @@
 
 ## Instruction
 
-Perform P2-005 exactly as specified in `tasks/phase-2/P2-005.md`. Create the
-client intake guide and copyable template without changing application code,
-README, or historical incident artifacts.
+Independently review the complete comment-based P2-005 proposal in pull request
+#16 against `tasks/phase-2/P2-005.md`, `docs/PHASE-2.md`, and `README.md`.
 
-Use complete comment-based delivery in pull request #16, then stop for independent review.
+Confirm that the proposed guide and template are plain-language,
+least-privilege, portfolio-safe, complete, and free of credentials, personal
+paths, pricing, proposal strategy, and private marketplace data. Confirm that
+the access, secret-redaction, backup, rollback, approval, decline, and
+escalation boundaries are safe and match the authorized small-app deployment
+scope.
+
+If the review passes, apply the proposed files through the repository workflow,
+record the review result, merge under the standing authorization, update the
+completion records, and route the next Phase 2 task. If the review fails or is
+uncertain, record the specific blocker and do not merge.
 
 ## Pointers
 
@@ -35,6 +44,8 @@ Use complete comment-based delivery in pull request #16, then stop for independe
 - Task: `tasks/phase-2/P2-005.md`
 - Current task: `tasks/CURRENT.md`
 - README: `README.md`
-- Deliverables: `docs/client-intake.md`, `templates/client-intake.md`
+- Guide: `docs/client-intake.md`
+- Template: `templates/client-intake.md`
+- Review: `reviews/P2-005.md`
 - Pull request: #16
 - Control room: GitHub issue #9

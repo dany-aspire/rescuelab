@@ -17,7 +17,7 @@
 2. [x] P2-002 — Build the RL-001 through RL-008 incident case-study index.
 3. [x] P2-003 — Produce a client-facing repository README.
 4. [x] P2-004 — Validate and document a reproducible demonstration.
-5. [ ] P2-005 — Create the client intake and triage kit.
+5. [x] P2-005 — Create the client intake and triage kit.
 6. [ ] P2-006 — Create the diagnosis-to-delivery playbook.
 7. [ ] P2-007 — Complete public-content QA and prepare the portfolio release.
 
