@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 37
-- State: REPAIR_APPROVED
+- Sequence: 38
+- State: FIX_VERIFIED
 - Incident: RL-007
 - Branch: incident/rl-007
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 81cd7cc02e1e4f9a162ca0073da836b57aa53513
@@ -17,17 +17,17 @@
 
 ## Instruction
 
-The diagnosis in `docs/incidents/RL-007-diagnosis.md` is accepted. Repair is
-approved under the learner's standing authorization.
+The approved one-value split-origin CORS repair is applied and verified. The
+frontend at `http://localhost:8080` can read health and incidents and create an
+incident through the API at `http://localhost:3000`; the new record persists
+after reload. Disallowed and obsolete origins receive no CORS authorization, so
+the exact-origin restriction remains intact.
 
-Apply only the smallest justified configuration repair described in
-`tasks/CURRENT.md`. Keep the restrictive exact-origin policy, run every
-acceptance check across the split origins, preserve the PostgreSQL volume, write
-the final report, and advance this mailbox to `FIX_VERIFIED` with
-`Next actor: CHATGPT_WORK`.
-
-Commit and push only the incident branch, then stop. Do not merge. End the local
-response with: “Next step: send `cfgh` to ChatGPT Work.”
+All automated checks, Compose validation, image builds, header checks, runtime
+health checks, and browser acceptance checks passed. The existing PostgreSQL
+volume and all nine prior records were preserved. Review the repair and
+`docs/incidents/RL-007-report.md` under the standing authorization. The incident
+branch has not been merged.
 
 ## Pointers
 
