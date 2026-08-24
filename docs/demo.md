@@ -14,10 +14,10 @@ No browser automation or screenshots are committed. The HTTP demonstration cover
 
 ## Clean-checkout demonstration
 
-Run the following from the directory in which you want the checkout. Replace the example repository URL if your remote uses a different address.
+Run the following from the directory in which you want the checkout.
 
 ```bash
-git clone https://github.com/OWNER/rescuelab.git
+git clone https://github.com/dany-aspire/rescuelab.git
 cd rescuelab
 cp .env.example .env
 npm ci
