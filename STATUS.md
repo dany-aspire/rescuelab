@@ -4,6 +4,6 @@
 - Public portfolio repository: active.
 - Completed incidents: RL-001, RL-002.
 - Active incident: RL-003 on `incident/rl-003`.
-- RL-003 state: DIAGNOSIS_PROPOSED; no repair applied.
-- Next actor: CHATGPT_WORK for diagnosis review.
+- RL-003 state: FIX_VERIFIED; repair is not merged into `main`.
+- Next actor: CHATGPT_WORK for repair review.
 - Coordination: GitHub-native handoff protocol; use `cfgh`.

@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 12
-- State: REPAIR_APPROVED
+- Sequence: 13
+- State: FIX_VERIFIED
 - Incident: RL-003
 - Branch: incident/rl-003
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 1937d57dc7b86402df245b7e1ca0bb3ed61db6cb
@@ -17,9 +17,14 @@
 
 The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-Repair is approved for the diagnosis documented in `docs/incidents/RL-003-diagnosis.md`. Apply the smallest justified production-overlay repair. Do not expose or commit credentials, do not use a fixed container IP, and do not delete or reset the PostgreSQL volume.
+The approved production-overlay repair has been applied and every RL-003
+acceptance check passed. Docker Compose service discovery now resolves the `db`
+service without a fixed host override. No credential was committed, and the
+existing PostgreSQL volume and all prior records were preserved.
 
-Run all ticket acceptance checks using the combined Compose files, write `docs/incidents/RL-003-report.md`, and update repository status accurately. Then update this mailbox to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`, commit and push only `incident/rl-003`, and stop. Do not merge.
+Review `docs/incidents/RL-003-report.md` and the incident branch changes. The
+repair has not been merged into `main`; merge only after explicit learner
+approval.
 
 ## Pointers
 
