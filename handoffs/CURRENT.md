@@ -1,23 +1,31 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 2
-- State: IDLE
-- Incident: none
-- Branch: main
+- Sequence: 7
+- State: REVIEWED
+- Incident: RL-002
+- Branch: incident/rl-002
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
-- Updated: 2026-08-23
+- Next actor: LEARNER
+- Updated: 2026-08-24
 - Control keyword: cfgh
-- Last completed incident: RL-001
-- Last merge commit: e42ae7069cd52f0c9cc7387600d4d2bd679b73ae
+- Base commit: 21a0fd5db10452c8a506a0cf91be978baa70f03c
+- Scenario commit: 21e44cdd241b77597a956ead9cbd45bd49ebba13
+- Repair approval: learner approved
+- Review decision: approved for merge
 
 ## Instruction
 
-The standalone keyword `cfgh` means “check and follow the GitHub handoff.” RL-001 is reviewed and merged. No local Codex action is currently requested. The active incident handoff is on `incident/rl-002`.
+The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-## Evidence
+ChatGPT Work reviewed the repair, verification report, and branch scope. The repair is approved for merge. Read `reviews/RL-002.md` for the independent review.
 
-- `docs/incidents/RL-001-report.md`
-- `reviews/RL-001.md`
-- Pull request: <https://github.com/dany-aspire/rescuelab/pull/1>
+No agent may merge until the learner explicitly approves the RL-002 merge through ChatGPT Work. After approval, ChatGPT Work will merge through GitHub, record the merge evidence, and return the canonical mailbox to `IDLE`.
+
+## Pointers
+
+- Task: `tasks/CURRENT.md`
+- Ticket: `tasks/incidents/RL-002.md`
+- Diagnosis: `docs/incidents/RL-002-diagnosis.md`
+- Final report: `docs/incidents/RL-002-report.md`
+- Independent review: `reviews/RL-002.md`

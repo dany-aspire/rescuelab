@@ -3,7 +3,8 @@
 - Healthy baseline: verified on `main`.
 - Public portfolio repository: active.
 - Completed incidents: RL-001.
-- RL-001 state: reviewed and merged through pull request #1.
-- Active incident: none.
-- Next planned incident: RL-002.
-- Coordination: GitHub-native handoff protocol; see `handoffs/CURRENT.md`.
+- Active incident: RL-002 on `incident/rl-002`.
+- RL-002 state: REVIEWED; repair is approved for merge but not merged into `main`.
+- Next actor: LEARNER for explicit merge approval through ChatGPT Work.
+- Review: `reviews/RL-002.md`.
+- Coordination: GitHub-native handoff protocol; see `handoffs/CURRENT.md` on the incident branch.
