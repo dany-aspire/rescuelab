@@ -1,30 +1,26 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 13
-- State: FIX_VERIFIED
+- Sequence: 14
+- State: REVIEWED
 - Incident: RL-003
 - Branch: incident/rl-003
-- Written by: LOCAL_CODEX
-- Next actor: CHATGPT_WORK
+- Written by: CHATGPT_WORK
+- Next actor: LEARNER
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 1937d57dc7b86402df245b7e1ca0bb3ed61db6cb
 - Scenario commit: this branch root commit
-- Approval: learner approved repair in ChatGPT Work
+- Repair approval: learner approved
+- Review decision: approved for merge
 
 ## Instruction
 
 The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-The approved production-overlay repair has been applied and every RL-003
-acceptance check passed. Docker Compose service discovery now resolves the `db`
-service without a fixed host override. No credential was committed, and the
-existing PostgreSQL volume and all prior records were preserved.
+ChatGPT Work reviewed the repair, verification report, and branch scope. The repair is approved for merge. Read `reviews/RL-003.md` for the independent review.
 
-Review `docs/incidents/RL-003-report.md` and the incident branch changes. The
-repair has not been merged into `main`; merge only after explicit learner
-approval.
+No agent may merge until the learner explicitly approves the RL-003 merge through ChatGPT Work. After approval, ChatGPT Work will merge through GitHub, record the merge evidence, and return the canonical mailbox to `IDLE`.
 
 ## Pointers
 
@@ -32,4 +28,5 @@ approval.
 - Ticket: `tasks/incidents/RL-003.md`
 - Diagnosis: `docs/incidents/RL-003-diagnosis.md`
 - Final report: `docs/incidents/RL-003-report.md`
+- Independent review: `reviews/RL-003.md`
 - Production overlay: `compose.production.yaml`
