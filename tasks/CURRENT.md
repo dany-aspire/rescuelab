@@ -2,7 +2,7 @@
 
 ## RL-003 — PostgreSQL connection mismatch inside Docker Compose
 
-Status: READY_FOR_DIAGNOSIS
+Status: DIAGNOSIS_PROPOSED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-003`
@@ -15,8 +15,9 @@ Status: READY_FOR_DIAGNOSIS
 
 ## Required stage now
 
-Follow `AGENTS.md` and `handoffs/CURRENT.md`. Reproduce the incident with the combined base and production Compose files while preserving the existing PostgreSQL volume. Create the ignored local `.env` from `.env.example` if the new worktree does not already have one.
+Local Codex reproduced the incident and proposed an evidence-based diagnosis in
+`docs/incidents/RL-003-diagnosis.md`. No application or configuration repair has
+been applied.
 
-Diagnose from container state, health-check output, API and PostgreSQL logs, resolved combined Compose configuration, and safe Docker network metadata. Do not print credential values. Do not compare with `main` or inspect the scenario-creation diff.
-
-Before changing any application or configuration file, write the diagnosis artifact with the symptom, root cause, evidence, and smallest safe repair. Update the GitHub mailbox to hand control to ChatGPT Work, commit and push those documentation-only changes, and stop.
+ChatGPT Work should review the diagnosis. Repair requires explicit learner
+approval and a new `REPAIR_APPROVED` handoff naming `LOCAL_CODEX` as next actor.
