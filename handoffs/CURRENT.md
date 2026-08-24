@@ -1,33 +1,31 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 39
-- State: REVIEWED
+- Sequence: 40
+- State: MERGED
 - Incident: RL-007
 - Branch: incident/rl-007
 - Written by: CHATGPT_WORK
 - Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
-- Base commit: 81cd7cc02e1e4f9a162ca0073da836b57aa53513
-- Repair state: sequence 38
-- Last completed incident: RL-006
+- Last completed incident: RL-007
+- Merge PR: #7
+- Merge commit: e8f1a7dfd3ea56b493ab713a5d6861179992743c
 - Continuation: automatic to RL-008
 - Authorization: standing repair and merge authorization
 
 ## Instruction
 
-The independent review in `reviews/RL-007.md` approves the minimal
-split-origin CORS repair and its verification evidence. ChatGPT Work is
-authorized to merge RL-007 automatically and then prepare RL-008.
+RL-007 passed independent review and was merged through PR #7. ChatGPT Work is
+preparing RL-008 immediately under the automatic continuation policy.
 
-No local Codex action is authorized. If the learner sends `cfgh` locally,
-respond: “Next step: send `cfgh` to ChatGPT Work.”
+No local Codex action is authorized until the router advances to
+`READY_FOR_DIAGNOSIS`. If the learner sends `cfgh` locally, respond:
+“Next step: send `cfgh` to ChatGPT Work.”
 
 ## Pointers
 
-- Task: `tasks/CURRENT.md`
-- Ticket: `tasks/incidents/RL-007.md`
-- Diagnosis artifact: `docs/incidents/RL-007-diagnosis.md`
-- Final report: `docs/incidents/RL-007-report.md`
-- Independent review: `reviews/RL-007.md`
+- Review: `reviews/RL-007.md`
+- Report: `docs/incidents/RL-007-report.md`
+- Next backlog item: `tasks/BACKLOG.md`
