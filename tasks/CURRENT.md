@@ -2,7 +2,7 @@
 
 ## RL-004 — Production web-image build failure
 
-Status: DIAGNOSIS_PROPOSED
+Status: REPAIR_APPROVED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-004`
@@ -10,13 +10,14 @@ Status: DIAGNOSIS_PROPOSED
 - Suggested worktree: `/home/dan/rescuelab-worktrees/rl-004`
 - Ticket: `tasks/incidents/RL-004.md`
 - Diagnosis artifact: `docs/incidents/RL-004-diagnosis.md`
-- Final report after approval: `docs/incidents/RL-004-report.md`
+- Final report: `docs/incidents/RL-004-report.md`
 
 ## Required stage now
 
-Local Codex reproduced the clean web-image build failure and proposed an
-evidence-based diagnosis in `docs/incidents/RL-004-diagnosis.md`. No application,
-Dockerfile, or configuration repair has been applied.
+The learner approved the RL-004 repair after ChatGPT Work reviewed the diagnosis.
 
-ChatGPT Work should review the diagnosis. Repair requires explicit learner
-approval and a new `REPAIR_APPROVED` handoff naming `LOCAL_CODEX` as next actor.
+Follow `AGENTS.md` and `handoffs/CURRENT.md`. Apply the smallest repair justified in `docs/incidents/RL-004-diagnosis.md`: move the existing frontend source-copy instruction after dependency installation but before the production build command. Preserve sensible dependency-layer caching.
+
+Do not weaken or skip the build and do not delete/reset the PostgreSQL volume. Run every acceptance check in `tasks/incidents/RL-004.md`, including a clean web-image build and complete-stack browser persistence verification.
+
+Write `docs/incidents/RL-004-report.md`, update repository status accurately, then update the incident mailbox to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`. Commit and push only `incident/rl-004`, then stop.
