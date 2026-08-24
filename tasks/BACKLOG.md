@@ -1,7 +1,7 @@
 # RescueLab Backlog
 
 1. [x] RL-001 — Frontend-to-API production communication failure.
-2. [ ] RL-002 — Required environment variable missing at runtime.
+2. [x] RL-002 — Required environment variable missing at runtime.
 3. [ ] RL-003 — PostgreSQL connection mismatch inside Docker Compose.
 4. [ ] RL-004 — Dependency or production-build failure.
 5. [ ] RL-005 — Docker service-name or port-routing failure.
