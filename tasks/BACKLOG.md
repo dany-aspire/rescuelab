@@ -6,7 +6,7 @@
 4. [x] RL-004 — Dependency or production-build failure.
 5. [x] RL-005 — Docker service-name or port-routing failure.
 6. [x] RL-006 — Nginx reverse-proxy path failure.
-7. [ ] RL-007 — CORS failure in a split-origin deployment.
+7. [x] RL-007 — CORS failure in a split-origin deployment.
 8. [ ] RL-008 — Deployment-specific process or port-binding failure.
 
 Only one incident may be active at a time. Exact injected causes are intentionally omitted.
