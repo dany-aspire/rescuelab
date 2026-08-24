@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 35
-- State: READY_FOR_DIAGNOSIS
+- Sequence: 36
+- State: DIAGNOSIS_PROPOSED
 - Incident: RL-007
 - Branch: incident/rl-007
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 81cd7cc02e1e4f9a162ca0073da836b57aa53513
@@ -19,14 +19,14 @@
 
 The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-RL-007 is ready for evidence-based diagnosis on `incident/rl-007`. Reproduce
-the customer-visible split-origin browser failure using the ticket and the
-three-file Compose stack. Diagnose from runtime, browser, network, header, and
-configuration evidence before changing application or configuration files.
+RL-007 was reproduced with the three-file split-origin stack while preserving
+the existing PostgreSQL volume. The diagnosis is documented in
+`docs/incidents/RL-007-diagnosis.md`. No application or configuration repair was
+applied.
 
-Write the diagnosis artifact, advance this mailbox to `DIAGNOSIS_PROPOSED`
-with `Next actor: CHATGPT_WORK`, commit and push the documentation-only
-handoff, then stop.
+Review the proposed diagnosis and smallest safe repair. If accepted, advance
+this mailbox to `REPAIR_APPROVED` with `Next actor: LOCAL_CODEX` under the
+standing authorization workflow.
 
 ## Pointers
 
