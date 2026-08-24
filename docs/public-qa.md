@@ -13,9 +13,9 @@ portfolio-packaging corrections, and prepares a factual release recommendation.
 It does not change application behavior, re-run the historical incidents, or
 claim client, production, security, payment, revenue, or guaranteed outcomes.
 
-Proposed changes remain subject to independent ChatGPT Work review. A tag and
-GitHub release must not be created until the proposal is reviewed and merged and
-the full GitHub Actions demonstration passes on the final merged revision.
+The proposal passed independent ChatGPT Work review and merged through PR #18.
+Tag and GitHub release `v1.0.0` must not be created until the full GitHub Actions
+demonstration passes on the exact release-candidate `main` revision.
 
 ## Public navigation and claim review
 
@@ -186,8 +186,10 @@ readiness, or commercial results.
 
 ## Residual limitations
 
-- GitHub Actions run #32737878549 passed on the applied proposal head. A new
-  final-head run after independent-review metadata remains a blocking merge gate.
+- GitHub Actions run #32737878549 passed on the applied proposal head. A final PR-head run after independent-review metadata passed as GitHub Actions
+  run #32738206194. PR #18 merged as `5a3da3324d32d2f8668720e5abccae902b7a635d`;
+  a successful workflow on the exact release-candidate `main` revision remains
+  the final release gate.
 - Docker-backed checks could not run locally because Docker is unavailable.
 - Browser rendering and visual interaction remain unautomated.
 - Pattern scans reduce risk but cannot prove the absence of every secret or
