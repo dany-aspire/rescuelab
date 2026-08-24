@@ -1,26 +1,28 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 9
-- State: IDLE
-- Incident: none
-- Branch: main
+- Sequence: 10
+- State: READY_FOR_DIAGNOSIS
+- Incident: RL-003
+- Branch: incident/rl-003
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
+- Next actor: LOCAL_CODEX
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Last completed incident: RL-002
-- Last pull request: https://github.com/dany-aspire/rescuelab/pull/2
-- Last merge commit: 75c7ec526ca2b01c5380ed97eb28c9874a906024
-- Next planned incident: RL-003
+- Active handoff: incident/rl-003:handoffs/CURRENT.md
 
 ## Instruction
 
-RL-002 is reviewed, merged, and recorded as complete. No local Codex action is currently requested. ChatGPT Work owns the next step: prepare RL-003 from the updated healthy `main` baseline.
+This file on `main` is the canonical handoff router. RL-003 is active on `incident/rl-003`.
 
-## Evidence
+Fetch `origin`, then read `handoffs/CURRENT.md`, `tasks/CURRENT.md`, and `AGENTS.md` from `origin/incident/rl-003`. Follow that branch mailbox only if its sequence and incident match this router and it names the receiving agent as `Next actor`.
 
-- `docs/incidents/RL-002-diagnosis.md`
-- `docs/incidents/RL-002-report.md`
-- `reviews/RL-002.md`
-- Pull request: <https://github.com/dany-aspire/rescuelab/pull/2>
+The current authorized stage is diagnosis only. Do not modify `main`.
+
+## Pointer
+
+- Active branch: `incident/rl-003`
+- Active mailbox: `incident/rl-003:handoffs/CURRENT.md`
+- Task: `incident/rl-003:tasks/CURRENT.md`
+- Ticket: `incident/rl-003:tasks/incidents/RL-003.md`
