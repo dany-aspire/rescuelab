@@ -6,7 +6,7 @@ GitHub is the only persistent communication bridge between ChatGPT Work and loca
 
 The learner sends the standalone keyword `cfgh` to either ChatGPT Work or local Codex. It expands to “check and follow the GitHub handoff.”
 
-The receiving agent reads the canonical mailbox and acts only when named by `Next actor`. Otherwise it reports the state and next actor and stops. The keyword does not grant repair or merge approval and never overrides a workflow gate.
+The receiving agent reads the canonical mailbox and acts only when named by `Next actor`. Otherwise it reports the state and next actor and stops. The keyword never overrides the diagnosis or independent review gates.
 
 ## Canonical router
 
@@ -27,9 +27,9 @@ ChatGPT Work may update only this router on `main` during an incident. Local Cod
 
 ## Actors
 
-- `CHATGPT_WORK`: designs incidents, reviews diagnosis/results, records approvals, prepares merge decisions, and immediately prepares the next backlog incident after a completed merge.
-- `LOCAL_CODEX`: reproduces, diagnoses, documents, repairs only after approval, verifies, commits, and pushes.
-- `LEARNER`: supervises reasoning and gives explicit repair and merge approval in ChatGPT Work.
+- `CHATGPT_WORK`: designs incidents, reviews diagnoses and repairs, records gate decisions, merges repairs that pass independent review, and immediately prepares the next backlog incident.
+- `LOCAL_CODEX`: reproduces, diagnoses, documents, repairs only after GitHub records `REPAIR_APPROVED`, verifies, commits, and pushes.
+- `LEARNER`: supervises the workflow and has granted standing authorization for routine repair and merge decisions that pass the gates. The learner may pause or override the workflow at any time.
 
 An agent acts only when named by `Next actor`.
 
@@ -54,11 +54,9 @@ Every handoff update increments `Sequence`, names the writer and next actor, and
 2. The learner sends `cfgh` to Codex.
 3. Codex diagnoses, writes and pushes the diagnosis, hands control to Work, and stops.
 4. The learner sends `cfgh` to Work.
-5. Work reviews the diagnosis and asks the learner for repair approval.
-6. After approval, Work records `REPAIR_APPROVED` in GitHub and hands control to Codex.
-7. The learner sends `cfgh` to Codex; Codex repairs, verifies, writes the report, pushes, hands control to Work, and stops.
-8. The learner sends `cfgh` to Work; Work reviews the branch and asks the learner for merge approval.
-9. Work merges only after explicit approval and records `MERGED`.
-10. Work immediately prepares the next unchecked backlog incident and routes the canonical mailbox to it. No separate “start next incident” message is needed.
+5. Work reviews the diagnosis. If accepted, Work automatically records `REPAIR_APPROVED` under standing authorization and hands control to Codex. If rejected or uncertain, Work stops and reports the blocker.
+6. The learner sends `cfgh` to Codex; Codex repairs, verifies, writes the report, pushes, hands control to Work, and stops.
+7. The learner sends `cfgh` to Work; Work independently reviews the branch. If the review passes, Work automatically records the review and merges under standing authorization. If the review fails or is uncertain, Work stops and reports the blocker.
+8. Work records completion, immediately prepares the next unchecked backlog incident, and routes the canonical mailbox to it. No separate “start next incident” message is needed.
 
-No transcript synchronization is required.
+No transcript synchronization or routine repair/merge approval prompt is required.
