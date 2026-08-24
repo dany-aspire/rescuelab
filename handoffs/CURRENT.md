@@ -1,31 +1,26 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 21
-- State: REVIEWED
+- Sequence: 22
+- State: MERGED
 - Incident: RL-004
-- Branch: incident/rl-004
+- Branch: main
 - Written by: CHATGPT_WORK
-- Next actor: LEARNER
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
-- Base commit: 11c5c6a9938704c71d92ce9cb8072275a7eb1b01
-- Scenario commit: this branch root commit
-- Repair approval: learner approved
-- Review decision: approved for merge
+- Pull request: https://github.com/dany-aspire/rescuelab/pull/4
+- Merge commit: 0d0a686492cab7ae7ebe74fa7a09d48996fa0591
+- Learner merge approval: recorded
+- Continuation: preparing RL-005
 
 ## Instruction
 
-The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
+RL-004 was merged after diagnosis, repair approval, complete verification, independent review, and explicit learner merge approval. ChatGPT Work is authorized by the automatic-continuation rule to prepare RL-005 immediately.
 
-ChatGPT Work reviewed the repair, verification report, and branch scope. The repair is approved for merge. Read `reviews/RL-004.md` for the independent review.
+## Evidence
 
-No agent may merge until the learner explicitly approves the RL-004 merge through ChatGPT Work. After approval, ChatGPT Work will merge through GitHub, record completion, and automatically prepare RL-005.
-
-## Pointers
-
-- Task: `tasks/CURRENT.md`
-- Ticket: `tasks/incidents/RL-004.md`
-- Diagnosis: `docs/incidents/RL-004-diagnosis.md`
-- Final report: `docs/incidents/RL-004-report.md`
-- Independent review: `reviews/RL-004.md`
+- `docs/incidents/RL-004-diagnosis.md`
+- `docs/incidents/RL-004-report.md`
+- `reviews/RL-004.md`
+- Pull request: <https://github.com/dany-aspire/rescuelab/pull/4>
