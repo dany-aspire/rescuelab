@@ -1,14 +1,14 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 56
-- State: TASK_ASSIGNED
+- Sequence: 57
+- State: WORK_PROPOSED
 - Incident: none
 - Task: P2-003
 - Branch: phase-2/p2-003
-- Written by: CHATGPT_WORK
-- Next actor: CODEX_EXECUTOR
-- Execution surface: CODEX_CLOUD
+- Written by: CODEX_EXECUTOR
+- Next actor: CHATGPT_WORK
+- Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
@@ -23,12 +23,16 @@
 
 ## Instruction
 
-Perform P2-003 exactly as specified in `tasks/phase-2/P2-003.md`. Replace the
-stale README with a factual client-facing entrance. Do not change application
-code, historical incident artifacts, or other documentation.
+Independently review the complete proposed `README.md` delivered in pull request
+#14 against `tasks/phase-2/P2-003.md`, the portfolio audit, the case studies, and
+the current application and deployment configuration. If the proposal is
+accurate and within scope, apply the README and this handoff through the
+authenticated GitHub connector, record the review, and merge under the standing
+authorization. If review fails or remains uncertain, report the blocker without
+merging.
 
-Use complete comment-based delivery in pull request #14 because the cloud
-checkout has no authenticated Git remote. Then stop for independent review.
+Do not change application code, historical incident artifacts, or other
+documentation as part of P2-003.
 
 ## Pointers
 
