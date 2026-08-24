@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 60
-- State: WORK_PROPOSED
+- Sequence: 61
+- State: REVIEWED
 - Incident: none
 - Task: P2-004
 - Branch: phase-2/p2-004
-- Written by: CODEX_EXECUTOR
+- Written by: CHATGPT_WORK
 - Next actor: CHATGPT_WORK
 - Execution surface: none
 - Updated: 2026-08-24
@@ -23,11 +23,9 @@
 
 ## Instruction
 
-Independently review the complete P2-004 proposal delivered in pull request #15.
-If it is accepted, apply the complete files to `phase-2/p2-004`, run the
-non-Docker checks, and require the reproducible-demonstration GitHub Actions job
-to pass before merging. Do not claim Docker or persistence verification from the
-Codex cloud proposal run; those checks require the resulting workflow result.
+P2-004 passed independent review and GitHub Actions run #32734653375 passed.
+Merge pull request #15 under the learner's standing authorization, then
+immediately prepare P2-005 and route it to Codex cloud.
 
 ## Pointers
 
@@ -37,5 +35,7 @@ Codex cloud proposal run; those checks require the resulting workflow result.
 - Demonstration: `docs/demo.md`
 - Smoke test: `scripts/smoke-test.sh`
 - Workflow: `.github/workflows/demo.yml`
+- Review: `reviews/P2-004.md`
+- Actions run: https://github.com/dany-aspire/rescuelab/actions/runs/32734653375
 - Pull request: #15
 - Control room: GitHub issue #9
