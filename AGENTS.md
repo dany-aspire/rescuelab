@@ -11,7 +11,10 @@ When `cfgh` is received:
 1. Run `git fetch origin --prune` when operating in a local checkout.
 2. Read the canonical `handoffs/CURRENT.md` from GitHub, then read the branch and task it names.
 3. If `Next actor` names the receiving agent, follow the current stage instructions.
-4. If another actor is named, report the current state and next actor, then stop.
+4. If another actor is named, report the current state and next actor, then give the learner the exact next action:
+   - For `CHATGPT_WORK`: “Send `cfgh` to ChatGPT Work.”
+   - For `LOCAL_CODEX`: “Send `cfgh` in the local Codex session.”
+   Then stop.
 5. Do not infer work from an earlier transcript or treat `cfgh` as authorization to bypass diagnosis or independent review gates.
 
 ## Startup procedure
@@ -42,6 +45,7 @@ Before changing application code or configuration:
 5. Write the diagnosis artifact specified by `tasks/CURRENT.md`.
 6. Update `handoffs/CURRENT.md` to `DIAGNOSIS_PROPOSED` with `Next actor: CHATGPT_WORK`.
 7. Commit and push those documentation-only changes, then stop.
+8. End the local response with: “Next step: send `cfgh` to ChatGPT Work.”
 
 Do not compare the incident branch with `main`, inspect the incident-creation commit diff, or use repository history to reveal the injected change before completing the evidence-based diagnosis.
 
@@ -59,6 +63,7 @@ After approval:
 - Update task and status files accurately.
 - Update `handoffs/CURRENT.md` to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`.
 - Commit and push only the incident branch, then stop.
+- End the local response with: “Next step: send `cfgh` to ChatGPT Work.”
 - Do not merge. ChatGPT Work owns the independent review and merge.
 
 After `FIX_VERIFIED`, ChatGPT Work independently reviews the repair and verification evidence. If the review passes, it records the review and merges automatically under the learner's standing authorization. If the review fails or is uncertain, it stops and reports the blocker instead of merging.
