@@ -1,40 +1,37 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 70
-- State: REVIEWED
+- Sequence: 71
+- State: RELEASE_CANDIDATE
 - Incident: none
-- Task: P2-007
-- Branch: phase-2/p2-007
+- Task: v1.0.0 finalization
+- Branch: main
 - Written by: CHATGPT_WORK
 - Next actor: CHATGPT_WORK
 - Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
-- Active pull request: #18
-- Last completed task: P2-006
-- Last merge PR: #17
-- Last merge commit: c86f296438ba53187af710c41b41230fb0290a32
-- Continuation: merge, finalize main, release v1.0.0, then IDLE
+- Last completed task: P2-007
+- Last merge PR: #18
+- Last merge commit: 5a3da3324d32d2f8668720e5abccae902b7a635d
+- Continuation: final main CI, tag and release v1.0.0, then IDLE
 - Authorization: standing repair and merge authorization
 - Executor preference: Codex cloud for all tasks until learner changes it
 - Update preference: post regular progress updates in ChatGPT Work
 
 ## Instruction
 
-P2-007 passed independent content review and applied-proposal Actions run
-#32737878549 passed. Require the full workflow to pass on this exact final PR
-head, merge PR #18, finalize the release state on `main`, require the workflow
-to pass on that exact release revision, then create tag and GitHub release
-`v1.0.0`. If any gate fails or becomes uncertain, stop without releasing.
+Phase 2 is complete and merged. Require the full workflow to pass on this exact
+`main` release-candidate revision. If it passes, create tag and GitHub release
+`v1.0.0` from the reviewed factual notes, then record RELEASED and IDLE.
+If the workflow fails or the release target moves, stop and report the blocker.
 
 ## Pointers
 
 - Public QA: `docs/public-qa.md`
-- Review: `reviews/P2-007.md`
-- README: `README.md`
-- Backlog: `tasks/BACKLOG.md`
 - Status: `STATUS.md`
-- Pull request: #18
+- Backlog: `tasks/BACKLOG.md`
+- Current task: `tasks/CURRENT.md`
+- Final Phase 2 PR: #18
 - Control room: GitHub issue #9
