@@ -1,14 +1,14 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 56
-- State: TASK_ASSIGNED
+- Sequence: 58
+- State: REVIEWED
 - Incident: none
 - Task: P2-003
 - Branch: phase-2/p2-003
 - Written by: CHATGPT_WORK
-- Next actor: CODEX_EXECUTOR
-- Execution surface: CODEX_CLOUD
+- Next actor: CHATGPT_WORK
+- Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
@@ -23,12 +23,9 @@
 
 ## Instruction
 
-Perform P2-003 exactly as specified in `tasks/phase-2/P2-003.md`. Replace the
-stale README with a factual client-facing entrance. Do not change application
-code, historical incident artifacts, or other documentation.
-
-Use complete comment-based delivery in pull request #14 because the cloud
-checkout has no authenticated Git remote. Then stop for independent review.
+P2-003 passed independent review. Merge pull request #14 under the learner's
+standing authorization, then immediately prepare P2-004 and route it to Codex
+cloud. Do not route routine work to local Codex.
 
 ## Pointers
 
@@ -38,5 +35,6 @@ checkout has no authenticated Git remote. Then stop for independent review.
 - Audit: `docs/portfolio-audit.md`
 - Case studies: `docs/case-studies.md`
 - Deliverable: `README.md`
+- Review: `reviews/P2-003.md`
 - Pull request: #14
 - Control room: GitHub issue #9
