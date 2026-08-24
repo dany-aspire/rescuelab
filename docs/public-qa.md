@@ -2,8 +2,8 @@
 
 Audit date: 2026-08-24  
 Task: P2-007  
-Audited revision: pull request #18 head
-`3efab53627b4b0d8bf535ebcfc13f34f7d852e81`  
+Audited revision: pull request #18 applied-proposal head
+`9033ae9bad4c084221a3eb6d39dffea0dc5ec7b9`  
 Scope: tracked files in the supplied `phase-2/p2-007` checkout
 
 ## Purpose
@@ -133,7 +133,7 @@ routes the repository to ChatGPT Work with `Execution surface: none`.
 | `git diff --check` | Passed | The supplied checkout had no whitespace errors or worktree modifications. |
 | Docker Compose validation and local Docker demonstration | Unavailable | Docker is not installed in the supplied Codex cloud checkout. |
 | `actionlint .github/workflows/demo.yml` | Unavailable | `actionlint` is not installed in the supplied checkout. |
-| Full GitHub Actions demonstration on the final PR head | Unverified release gate | No status result for PR head `3efab53627b4b0d8bf535ebcfc13f34f7d852e81` was included in the supplied PR context or accessible checkout. Independent review must require a successful final-head workflow run before merge/release approval. |
+| Full GitHub Actions demonstration on the applied proposal head | Passed | Run #32737878549 passed repository checks, Compose validation, image/stack startup, public HTTP smoke, container recreation, persistence, evidence upload, and cleanup. A final run is still required after independent-review metadata is committed. |
 
 The successful repository checks establish that the backend tests and frontend
 build pass in this checkout. They do not establish browser rendering, a live
@@ -186,8 +186,8 @@ readiness, or commercial results.
 
 ## Residual limitations
 
-- Final-head GitHub Actions success has not been demonstrated in the supplied
-  execution context and remains a blocking release gate.
+- GitHub Actions run #32737878549 passed on the applied proposal head. A new
+  final-head run after independent-review metadata remains a blocking merge gate.
 - Docker-backed checks could not run locally because Docker is unavailable.
 - Browser rendering and visual interaction remain unautomated.
 - Pattern scans reduce risk but cannot prove the absence of every secret or
