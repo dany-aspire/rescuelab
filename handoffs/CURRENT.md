@@ -1,33 +1,30 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 45
-- State: REVIEWED
+- Sequence: 46
+- State: MERGED
 - Incident: RL-008
 - Branch: incident/rl-008
 - Written by: CHATGPT_WORK
 - Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
-- Base commit: 13931780f227651558cca862b36edeef3f1e9c1f
-- Repair state: sequence 44
-- Last completed incident: RL-007
-- Continuation: finish current backlog
+- Last completed incident: RL-008
+- Merge PR: #8
+- Merge commit: 167bf86cbe6b2a58357b663a6706281a08b6b724
+- Continuation: close current backlog
 - Authorization: standing repair and merge authorization
 
 ## Instruction
 
-The independent review in `reviews/RL-008.md` approves the minimal API
-listen-host repair and its verification evidence. ChatGPT Work is authorized to
-merge RL-008 automatically and close the current incident backlog.
+RL-008 passed independent review and was merged through PR #8. ChatGPT Work is
+recording completion of the current RL-001 through RL-008 backlog and will move
+the mailbox to `IDLE`.
 
-No local Codex action is authorized. If the learner sends `cfgh` locally,
-respond: “Next step: send `cfgh` to ChatGPT Work.”
+No local Codex action is authorized.
 
 ## Pointers
 
-- Task: `tasks/CURRENT.md`
-- Ticket: `tasks/incidents/RL-008.md`
-- Diagnosis artifact: `docs/incidents/RL-008-diagnosis.md`
-- Final report: `docs/incidents/RL-008-report.md`
-- Independent review: `reviews/RL-008.md`
+- Review: `reviews/RL-008.md`
+- Report: `docs/incidents/RL-008-report.md`
+- Backlog: `tasks/BACKLOG.md`
