@@ -1,16 +1,17 @@
 # Current Task
 
-Status: REVIEWED
+Status: ASSIGNED
 
-## P2-003 — Client-facing README
+## P2-004 — Reproducible demonstration
 
-The client-facing README is complete and independently reviewed.
+Create a clean-checkout verification path with durable automated evidence.
 
-- Branch: `phase-2/p2-003`
-- Pull request: #14
-- Deliverable: `README.md`
-- Review: `reviews/P2-003.md`
-- Decision: approved under the learner's standing merge authorization
-- Application changes: none
-
-After merge, ChatGPT Work must immediately prepare P2-004 and route it to Codex cloud.
+- Actor: `CODEX_EXECUTOR`
+- Execution surface: `CODEX_CLOUD`
+- Branch: `phase-2/p2-004`
+- Task: `tasks/phase-2/P2-004.md`
+- Primary deliverables: `docs/demo.md`, smoke-test script, GitHub Actions workflow
+- Application behavior changes: not authorized
+- Merge owner: `CHATGPT_WORK`
+- Delivery: complete file contents in PR #15; no Git push required
+- Merge gate: relevant GitHub Actions checks must pass
