@@ -1,30 +1,26 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 20
-- State: FIX_VERIFIED
+- Sequence: 21
+- State: REVIEWED
 - Incident: RL-004
 - Branch: incident/rl-004
-- Written by: LOCAL_CODEX
-- Next actor: CHATGPT_WORK
+- Written by: CHATGPT_WORK
+- Next actor: LEARNER
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 11c5c6a9938704c71d92ce9cb8072275a7eb1b01
 - Scenario commit: this branch root commit
-- Approval: learner approved repair in ChatGPT Work
+- Repair approval: learner approved
+- Review decision: approved for merge
 
 ## Instruction
 
 The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-The approved Dockerfile instruction-order repair has been applied and every
-RL-004 acceptance check passed, including the no-cache production web-image
-build and browser persistence verification. The existing PostgreSQL volume and
-all prior records were preserved.
+ChatGPT Work reviewed the repair, verification report, and branch scope. The repair is approved for merge. Read `reviews/RL-004.md` for the independent review.
 
-Review `docs/incidents/RL-004-report.md` and the incident branch changes. The
-repair has not been merged into `main`; merge only after explicit learner
-approval.
+No agent may merge until the learner explicitly approves the RL-004 merge through ChatGPT Work. After approval, ChatGPT Work will merge through GitHub, record completion, and automatically prepare RL-005.
 
 ## Pointers
 
@@ -32,3 +28,4 @@ approval.
 - Ticket: `tasks/incidents/RL-004.md`
 - Diagnosis: `docs/incidents/RL-004-diagnosis.md`
 - Final report: `docs/incidents/RL-004-report.md`
+- Independent review: `reviews/RL-004.md`
