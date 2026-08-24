@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 29
-- State: READY_FOR_DIAGNOSIS
+- Sequence: 30
+- State: DIAGNOSIS_PROPOSED
 - Incident: RL-006
 - Branch: incident/rl-006
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: f37a3e7f843a1509155331044cea871ea7a39a1f
@@ -17,9 +17,13 @@
 
 The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-Create or reuse the worktree specified by `tasks/CURRENT.md`. Read `AGENTS.md`, the current task, and the customer ticket. Reproduce RL-006 through the production-style Nginx endpoint without deleting or resetting the existing PostgreSQL volume.
+RL-006 was reproduced through the production-style Nginx endpoint while
+preserving the existing PostgreSQL volume. The diagnosis is documented in
+`docs/incidents/RL-006-diagnosis.md`. No application or configuration repair was
+applied.
 
-Complete the diagnosis stage only. Do not change application or configuration files. Write the required diagnosis artifact, update this mailbox to `DIAGNOSIS_PROPOSED` with `Next actor: CHATGPT_WORK`, commit and push the documentation-only handoff, then stop.
+Review the proposed diagnosis and smallest safe repair. If the learner approves
+repair, advance this mailbox to `REPAIR_APPROVED` with `Next actor: LOCAL_CODEX`.
 
 ## Pointers
 
