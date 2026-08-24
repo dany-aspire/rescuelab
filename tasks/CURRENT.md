@@ -1,14 +1,21 @@
 # Current Task
 
-Status: RELEASE_CANDIDATE
+Status: COMPLETE
 
-## RescueLab v1.0.0 finalization
+## RescueLab v1.0.0 released
 
-Phase 2 is complete and merged. The reviewed public portfolio is ready for final release gates.
+No task is active.
 
+- Phase 1 incidents: RL-001 through RL-008 complete
+- Phase 2 tasks: P2-001 through P2-007 reviewed and complete
 - Final Phase 2 pull request: #18
-- Final Phase 2 merge commit: `5a3da3324d32d2f8668720e5abccae902b7a635d`
-- Final PR-head Actions run: #32738206194 — success
+- Release-candidate pull request: #19
+- Release tree: `184c12439ae010d7fc199a99a7e57ea550b033e1`
 - Release tag: `v1.0.0`
-- Remaining gates: full workflow on this exact `main` revision, tag creation, and GitHub release
-- Release owner: `CHATGPT_WORK`
+- Final release-candidate workflow run: #32738809862 — success
+- Post-publication regression run: #47 — success
+- Workflow state: IDLE
+- Next actor: LEARNER
+
+Any future work requires a newly scoped task with explicit acceptance and
+review gates.
