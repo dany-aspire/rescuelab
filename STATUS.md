@@ -8,6 +8,7 @@
 - Phase 2: defined — portfolio and client readiness.
 - Phase 2 progress: 1 of 7 tasks complete.
 - Completed Phase 2 tasks: P2-001 portfolio evidence audit.
+- Current task: P2-002 incident case-study index is assigned to Codex cloud.
 - Active incident: none.
-- Workflow state: P2-001 independently reviewed and approved for merge.
+- Workflow state: P2-002 assigned.
 - Coordination: GitHub-native Protocol 2 with the `CODEX_EXECUTOR` role, Codex cloud as the default execution surface, control-room issue #9, and standing repair/merge authorization; use `cfgh`.
