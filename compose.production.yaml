@@ -1,2 +1,4 @@
 services:
-  api: {}
+  api:
+    environment:
+      PORT: "3001"

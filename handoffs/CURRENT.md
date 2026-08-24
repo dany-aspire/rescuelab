@@ -1,26 +1,30 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 22
-- State: MERGED
-- Incident: RL-004
-- Branch: main
+- Sequence: 23
+- State: READY_FOR_DIAGNOSIS
+- Incident: RL-005
+- Branch: incident/rl-005
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
+- Next actor: LOCAL_CODEX
 - Updated: 2026-08-24
 - Control keyword: cfgh
-- Pull request: https://github.com/dany-aspire/rescuelab/pull/4
-- Merge commit: 0d0a686492cab7ae7ebe74fa7a09d48996fa0591
-- Learner merge approval: recorded
-- Continuation: preparing RL-005
+- Base commit: a259a6650b001278fde18025d3df2607237d1dfc
+- Scenario commit: this branch root commit
+- Continuation: automatic from RL-004
 
 ## Instruction
 
-RL-004 was merged after diagnosis, repair approval, complete verification, independent review, and explicit learner merge approval. ChatGPT Work is authorized by the automatic-continuation rule to prepare RL-005 immediately.
+The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-## Evidence
+Create or reuse the worktree specified by `tasks/CURRENT.md`. Read `AGENTS.md`, the current task, and the customer ticket. Reproduce RL-005 using the combined base and production Compose files without deleting or resetting the existing PostgreSQL volume.
 
-- `docs/incidents/RL-004-diagnosis.md`
-- `docs/incidents/RL-004-report.md`
-- `reviews/RL-004.md`
-- Pull request: <https://github.com/dany-aspire/rescuelab/pull/4>
+Complete the diagnosis stage only. Do not change application or configuration files and do not expose credential values. Write the required diagnosis artifact, update this mailbox to `DIAGNOSIS_PROPOSED` with `Next actor: CHATGPT_WORK`, commit and push the documentation-only handoff, then stop.
+
+## Pointers
+
+- Task: `tasks/CURRENT.md`
+- Ticket: `tasks/incidents/RL-005.md`
+- Diagnosis artifact: `docs/incidents/RL-005-diagnosis.md`
+- Final report after approval: `docs/incidents/RL-005-report.md`
+- Production overlay: `compose.production.yaml`
