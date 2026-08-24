@@ -1,30 +1,36 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 34
-- State: MERGED
-- Incident: RL-006
-- Branch: incident/rl-006
+- Sequence: 35
+- State: READY_FOR_DIAGNOSIS
+- Incident: RL-007
+- Branch: incident/rl-007
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
+- Next actor: LOCAL_CODEX
 - Updated: 2026-08-24
 - Control keyword: cfgh
+- Base commit: 81cd7cc02e1e4f9a162ca0073da836b57aa53513
+- Scenario commit: this branch root commit
 - Last completed incident: RL-006
-- Merge PR: #6
-- Merge commit: a2fd15733249df7183828cb0e3e80d3f9b8400a6
-- Continuation: automatic to RL-007
+- Continuation: automatic
 - Authorization: standing repair and merge authorization
 
 ## Instruction
 
-RL-006 passed independent review and was merged through PR #6. ChatGPT Work is
-preparing RL-007 immediately under the automatic continuation policy.
+The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-No local Codex action is authorized until the router advances to
-`READY_FOR_DIAGNOSIS`.
+RL-007 is ready for evidence-based diagnosis on `incident/rl-007`. Reproduce
+the customer-visible split-origin browser failure using the ticket and the
+three-file Compose stack. Diagnose from runtime, browser, network, header, and
+configuration evidence before changing application or configuration files.
+
+Write the diagnosis artifact, advance this mailbox to `DIAGNOSIS_PROPOSED`
+with `Next actor: CHATGPT_WORK`, commit and push the documentation-only
+handoff, then stop.
 
 ## Pointers
 
-- Review: `reviews/RL-006.md`
-- Report: `docs/incidents/RL-006-report.md`
-- Next backlog item: `tasks/BACKLOG.md`
+- Task: `tasks/CURRENT.md`
+- Ticket: `tasks/incidents/RL-007.md`
+- Diagnosis artifact: `docs/incidents/RL-007-diagnosis.md`
+- Final report after approval: `docs/incidents/RL-007-report.md`
