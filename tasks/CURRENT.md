@@ -1,24 +1,21 @@
 # Current Task
 
-## RL-008 — Deployment-specific process or port-binding failure
+Status: IDLE
 
-Status: REVIEWED
+The planned RL-001 through RL-008 incident backlog is complete. Every incident
+was diagnosed before repair, independently reviewed, and merged into `main`
+through a pull request.
 
-- Repository: `dany-aspire/rescuelab`
-- Branch: `incident/rl-008`
-- Healthy reference: `main`
+No incident branch is active and no local Codex action is authorized. The next
+task requires learner direction: review the portfolio, publish a release, or
+define a new RescueLab phase and backlog.
+
+## Completed final incident
+
+- Incident: RL-008
+- Pull request: #8
+- Merge commit: `167bf86cbe6b2a58357b663a6706281a08b6b724`
 - Ticket: `tasks/incidents/RL-008.md`
-- Diagnosis artifact: `docs/incidents/RL-008-diagnosis.md`
-- Final report: `docs/incidents/RL-008-report.md`
-- Independent review: `reviews/RL-008.md`
-
-## Review result
-
-ChatGPT Work independently reviewed the sequence-44 repair and approved it. The
-runtime change is limited to the accepted one-line listen-host repair, the API
-remains unexposed on the host, and the evidence satisfies every RL-008
-acceptance criterion.
-
-Merge is authorized under the learner's standing authorization. RL-008 is the
-last currently planned backlog incident, so ChatGPT Work will record completion
-and route the mailbox to `IDLE` after merging.
+- Diagnosis: `docs/incidents/RL-008-diagnosis.md`
+- Report: `docs/incidents/RL-008-report.md`
+- Review: `reviews/RL-008.md`
