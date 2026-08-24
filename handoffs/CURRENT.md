@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 17
-- State: READY_FOR_DIAGNOSIS
+- Sequence: 18
+- State: DIAGNOSIS_PROPOSED
 - Incident: RL-004
 - Branch: incident/rl-004
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Last completed incident: RL-003
@@ -17,13 +17,12 @@
 
 This file on `main` is the canonical handoff router. RL-004 is active on `incident/rl-004`.
 
-Fetch `origin`, then read `handoffs/CURRENT.md`, `tasks/CURRENT.md`, and `AGENTS.md` from `origin/incident/rl-004`. Follow that branch mailbox only if its sequence and incident match this router and it names the receiving agent as `Next actor`.
+The diagnosis has been proposed and no repair has been applied. Read the active branch mailbox and `docs/incidents/RL-004-diagnosis.md`. ChatGPT Work must review the diagnosis and obtain explicit learner repair approval.
 
-The current authorized stage is diagnosis only. Do not modify `main`.
+No local Codex action is currently authorized. Do not modify `main`.
 
 ## Pointer
 
 - Active branch: `incident/rl-004`
 - Active mailbox: `incident/rl-004:handoffs/CURRENT.md`
-- Task: `incident/rl-004:tasks/CURRENT.md`
-- Ticket: `incident/rl-004:tasks/incidents/RL-004.md`
+- Diagnosis: `incident/rl-004:docs/incidents/RL-004-diagnosis.md`
