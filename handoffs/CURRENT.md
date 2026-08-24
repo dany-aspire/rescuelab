@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 17
-- State: READY_FOR_DIAGNOSIS
+- Sequence: 18
+- State: DIAGNOSIS_PROPOSED
 - Incident: RL-004
 - Branch: incident/rl-004
-- Written by: CHATGPT_WORK
-- Next actor: LOCAL_CODEX
+- Written by: LOCAL_CODEX
+- Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 11c5c6a9938704c71d92ce9cb8072275a7eb1b01
@@ -16,9 +16,13 @@
 
 The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
 
-Create or reuse the worktree specified by `tasks/CURRENT.md`. Read `AGENTS.md`, the current task, and the customer ticket. Reproduce RL-004 as a clean production web-image build.
+RL-004 was reproduced as a clean production web-image build. The diagnosis is
+documented in `docs/incidents/RL-004-diagnosis.md`. No application, Dockerfile,
+or configuration repair was applied, and the existing PostgreSQL volume and
+records remain intact.
 
-Complete the diagnosis stage only. Do not change application or configuration files and do not delete or reset the PostgreSQL volume. Write the required diagnosis artifact, update this mailbox to `DIAGNOSIS_PROPOSED` with `Next actor: CHATGPT_WORK`, commit and push the documentation-only handoff, then stop.
+Review the proposed diagnosis and smallest safe repair. If the learner approves
+repair, advance this mailbox to `REPAIR_APPROVED` with `Next actor: LOCAL_CODEX`.
 
 ## Pointers
 

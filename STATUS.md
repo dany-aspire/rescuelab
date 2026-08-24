@@ -4,6 +4,6 @@
 - Public portfolio repository: active.
 - Completed incidents: RL-001, RL-002, RL-003.
 - Active incident: RL-004 on `incident/rl-004`.
-- RL-004 state: READY_FOR_DIAGNOSIS.
-- Next actor: LOCAL_CODEX.
+- RL-004 state: DIAGNOSIS_PROPOSED; no repair applied.
+- Next actor: CHATGPT_WORK for diagnosis review.
 - Coordination: GitHub-native handoff protocol with automatic continuation; use `cfgh`.
