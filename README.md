@@ -45,3 +45,5 @@ docker compose config
 ```
 
 The first incident begins only after this baseline works on the learner's machine.
+
+<!-- P2-003 assignment scaffold: replace this README through reviewed comment-based delivery. -->
