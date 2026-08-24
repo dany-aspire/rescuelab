@@ -1,0 +1,57 @@
+name: Publish RescueLab v1.0.0
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-v1.0.0.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.repository == 'dany-aspire/rescuelab' && github.event.pull_request.head.ref == 'release/publish-v1.0.0'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the tested release tree
+        uses: actions/checkout@v4
+        with:
+          ref: 184c12439ae010d7fc199a99a7e57ea550b033e1
+          fetch-depth: 0
+
+      - name: Verify exact release target
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "184c12439ae010d7fc199a99a7e57ea550b033e1"
+          test -f docs/release-notes-v1.0.0.md
+
+      - name: Create tag and GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: 184c12439ae010d7fc199a99a7e57ea550b033e1
+        run: |
+          set -euo pipefail
+
+          if git ls-remote --exit-code --tags origin refs/tags/v1.0.0 >/dev/null 2>&1; then
+            git fetch --force origin refs/tags/v1.0.0:refs/tags/v1.0.0
+            test "$(git rev-list -n 1 v1.0.0)" = "$TARGET_SHA"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git tag -a v1.0.0 "$TARGET_SHA" -m "RescueLab v1.0.0"
+            git push origin refs/tags/v1.0.0
+          fi
+
+          if ! gh release view v1.0.0 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create v1.0.0 \
+              --repo "$GITHUB_REPOSITORY" \
+              --verify-tag \
+              --title "RescueLab v1.0.0" \
+              --notes-file docs/release-notes-v1.0.0.md
+          fi
+
+          gh release view v1.0.0 --repo "$GITHUB_REPOSITORY"
