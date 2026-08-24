@@ -1,26 +1,25 @@
 # Current Task
 
-Status: IDLE
+Status: PHASE_2_DEFINED
 
-The planned RL-001 through RL-008 incident backlog is complete. Every incident
-was diagnosed before repair, independently reviewed, and merged into `main`
-through a pull request.
+Phase 2 turns the completed RescueLab incident series into a client-ready public
+portfolio and reusable small-engagement workflow. Its scope and quality gates
+are defined in `docs/PHASE-2.md`.
 
-No incident branch is active and no Codex executor action is authorized. The
-next task requires learner direction: review the portfolio, publish a release,
-or define a new RescueLab phase and backlog.
+ChatGPT Work is preparing the first task branch and pull request. No Codex
+executor action is authorized by this definition step alone.
 
-Future incidents default to the `CODEX_CLOUD` execution surface. Use
-`LOCAL_CODEX` only when the task requires the learner's exact machine or a
-local-only environment. GitHub issue #9 is the cloud control room;
-`handoffs/CURRENT.md` remains authoritative.
+## Next task
 
-## Completed final incident
+- Task: P2-001 — Portfolio evidence audit
+- Goal: inventory public evidence, verify claims, identify gaps, and recommend
+  the smallest improvements
+- Default execution surface: `CODEX_CLOUD`
+- Implementation must occur only after the canonical handoff assigns
+  `Next actor: CODEX_EXECUTOR`
 
-- Incident: RL-008
-- Pull request: #8
-- Merge commit: `167bf86cbe6b2a58357b663a6706281a08b6b724`
-- Ticket: `tasks/incidents/RL-008.md`
-- Diagnosis: `docs/incidents/RL-008-diagnosis.md`
-- Report: `docs/incidents/RL-008-report.md`
-- Review: `reviews/RL-008.md`
+## Completed foundation
+
+- Phase 1 incidents: RL-001 through RL-008
+- Final Phase 1 pull request: #8
+- Final Phase 1 merge commit: `167bf86cbe6b2a58357b663a6706281a08b6b724`
