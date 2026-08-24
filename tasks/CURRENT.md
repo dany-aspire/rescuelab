@@ -1,23 +1,11 @@
 # Current Task
 
-## RL-005 — Docker API port-routing failure
+No incident is active during automatic continuation.
 
-Status: FIX_VERIFIED
+- Status: PREPARING_NEXT
+- Healthy branch: `main`
+- Last completed incident: RL-005
+- Last merge commit: `425d7d61395cecd9bfaeaea698e5cf6ed824ced7`
+- Next incident: RL-006
 
-- Repository: `dany-aspire/rescuelab`
-- Branch: `incident/rl-005`
-- Healthy reference: `main`
-- Suggested worktree: `/home/dan/rescuelab-worktrees/rl-005`
-- Ticket: `tasks/incidents/RL-005.md`
-- Diagnosis artifact: `docs/incidents/RL-005-diagnosis.md`
-- Final report: `docs/incidents/RL-005-report.md`
-- Production overlay: `compose.production.yaml`
-
-## Required stage now
-
-Local Codex applied the approved production-overlay port repair and verified
-every acceptance criterion. See `docs/incidents/RL-005-report.md` for the
-complete evidence.
-
-ChatGPT Work should review the repair and verification on `incident/rl-005`.
-Do not merge until the learner explicitly approves it through ChatGPT Work.
+ChatGPT Work is preparing RL-006. Local Codex should not begin work until the canonical router and active branch mailbox name `LOCAL_CODEX`.
