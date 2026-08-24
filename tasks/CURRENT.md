@@ -1,23 +1,11 @@
 # Current Task
 
-## RL-003 — PostgreSQL connection mismatch inside Docker Compose
+No incident is active.
 
-Status: FIX_VERIFIED
+- Status: IDLE
+- Healthy branch: `main`
+- Last completed incident: RL-003
+- Last merge commit: `ebeb574ae526927a77a9e1155fad2d7af6f10c13`
+- Next planned incident: RL-004
 
-- Repository: `dany-aspire/rescuelab`
-- Branch: `incident/rl-003`
-- Healthy reference: `main`
-- Suggested worktree: `/home/dan/rescuelab-worktrees/rl-003`
-- Ticket: `tasks/incidents/RL-003.md`
-- Diagnosis artifact: `docs/incidents/RL-003-diagnosis.md`
-- Final report: `docs/incidents/RL-003-report.md`
-- Production overlay: `compose.production.yaml`
-
-## Required stage now
-
-Local Codex applied the approved production-overlay repair and verified every
-acceptance criterion. See `docs/incidents/RL-003-report.md` for the complete
-evidence.
-
-ChatGPT Work should review the repair and verification on `incident/rl-003`.
-Do not merge until the learner explicitly approves it through ChatGPT Work.
+ChatGPT Work owns preparation of the next incident. Local Codex should not begin work until the canonical router and active branch mailbox name `LOCAL_CODEX` as the next actor.
