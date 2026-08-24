@@ -1,14 +1,14 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 53
-- State: TASK_ASSIGNED
+- Sequence: 55
+- State: REVIEWED
 - Incident: none
 - Task: P2-002
 - Branch: phase-2/p2-002
 - Written by: CHATGPT_WORK
-- Next actor: CODEX_EXECUTOR
-- Execution surface: CODEX_CLOUD
+- Next actor: CHATGPT_WORK
+- Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
@@ -22,12 +22,9 @@
 
 ## Instruction
 
-Perform P2-002 exactly as specified in `tasks/phase-2/P2-002.md`. Produce the
-eight-incident case-study index without changing application code, README, or
-historical incident artifacts.
-
-Use complete comment-based delivery in pull request #13 because the cloud
-checkout has no authenticated Git remote. Then stop for independent review.
+P2-002 passed independent review. Merge pull request #13 under the learner's
+standing authorization, then immediately prepare P2-003 and route it to Codex
+cloud. Do not route routine work to local Codex.
 
 ## Pointers
 
@@ -35,6 +32,7 @@ checkout has no authenticated Git remote. Then stop for independent review.
 - Task: `tasks/phase-2/P2-002.md`
 - Current task: `tasks/CURRENT.md`
 - Audit: `docs/portfolio-audit.md`
-- Deliverable: `docs/case-studies.md`
+- Review: `reviews/P2-002.md`
+- Deliverable path: `docs/case-studies.md`
 - Pull request: #13
 - Control room: GitHub issue #9

@@ -6,9 +6,9 @@
 - RL-008: merged through PR #8 at `167bf86cbe6b2a58357b663a6706281a08b6b724`.
 - Phase 1 incident backlog: complete.
 - Phase 2: defined — portfolio and client readiness.
-- Phase 2 progress: 1 of 7 tasks complete.
+- Phase 2 progress: 2 of 7 tasks complete.
 - Completed Phase 2 tasks: P2-001 portfolio evidence audit.
-- Current task: P2-002 incident case-study index is assigned to Codex cloud.
+- Completed Phase 2 tasks: P2-001 portfolio evidence audit; P2-002 incident case-study index.
 - Active incident: none.
-- Workflow state: P2-002 assigned.
+- Workflow state: P2-002 independently reviewed and approved for merge.
 - Coordination: GitHub-native Protocol 2 with the `CODEX_EXECUTOR` role, Codex cloud as the default execution surface, control-room issue #9, and standing repair/merge authorization; use `cfgh`.

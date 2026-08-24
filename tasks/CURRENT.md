@@ -1,20 +1,16 @@
 # Current Task
 
-Status: ASSIGNED
+Status: REVIEWED
 
 ## P2-002 — Incident case-study index
 
-Create a concise navigable index for all eight completed deployment-failure
-training exercises.
+The eight-exercise case-study index is complete and independently reviewed.
 
-- Actor: `CODEX_EXECUTOR`
-- Execution surface: `CODEX_CLOUD`
 - Branch: `phase-2/p2-002`
-- Task: `tasks/phase-2/P2-002.md`
+- Pull request: #13
 - Deliverable: `docs/case-studies.md`
-- Application changes: not authorized
-- Merge owner: `CHATGPT_WORK`
-- Delivery: complete file contents in PR #13; no Git push required
+- Review: `reviews/P2-002.md`
+- Decision: approved under the learner's standing merge authorization
+- Application changes: none
 
-Codex cloud must complete the index, report full deliverable contents in the
-pull request, propose the next handoff, and stop without merging.
+After merge, ChatGPT Work must immediately prepare P2-003 and route it to Codex cloud.
