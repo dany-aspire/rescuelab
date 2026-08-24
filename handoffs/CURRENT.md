@@ -1,37 +1,40 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 67
-- State: REVIEWED
+- Sequence: 68
+- State: TASK_ASSIGNED
 - Incident: none
-- Task: P2-006
-- Branch: phase-2/p2-006
+- Task: P2-007
+- Branch: phase-2/p2-007
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
-- Execution surface: none
+- Next actor: CODEX_EXECUTOR
+- Execution surface: CODEX_CLOUD
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
-- Active pull request: #17
-- Last completed task: P2-005
-- Last merge PR: #16
-- Last merge commit: adc3c6f0aa7f15aa548042db9f0f796eab3fca3b
-- Continuation: automatic to P2-007 after merge
+- Active pull request: #18
+- Last completed task: P2-006
+- Last merge PR: #17
+- Last merge commit: c86f296438ba53187af710c41b41230fb0290a32
+- Continuation: release and IDLE after independent review
 - Authorization: standing repair and merge authorization
 - Executor preference: Codex cloud for all tasks until learner changes it
 - Update preference: post regular progress updates in ChatGPT Work
 
 ## Instruction
 
-P2-006 passed independent review. Merge pull request #17 under the learner's
-standing authorization, then immediately prepare P2-007 and route it to Codex cloud.
+Perform P2-007 exactly as specified in `tasks/phase-2/P2-007.md`. Audit the
+public current tree, propose only minimal packaging corrections, explicit
+justified deletions, and factual release notes. Do not change application behavior.
+
+Use complete comment-based delivery in pull request #18, then stop for independent review.
 
 ## Pointers
 
 - Phase definition: `docs/PHASE-2.md`
-- Task: `tasks/phase-2/P2-006.md`
-- Playbook: `docs/delivery-playbook.md`
-- Template: `templates/delivery-report.md`
-- Review: `reviews/P2-006.md`
-- Pull request: #17
+- Task: `tasks/phase-2/P2-007.md`
+- Current task: `tasks/CURRENT.md`
+- Audit: `docs/portfolio-audit.md`
+- README: `README.md`
+- Pull request: #18
 - Control room: GitHub issue #9
