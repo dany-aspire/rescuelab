@@ -1,0 +1,4 @@
+services:
+  api:
+    extra_hosts:
+      - "db=127.0.0.1"
