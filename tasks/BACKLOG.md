@@ -7,6 +7,8 @@
 5. [x] RL-005 — Docker service-name or port-routing failure.
 6. [x] RL-006 — Nginx reverse-proxy path failure.
 7. [x] RL-007 — CORS failure in a split-origin deployment.
-8. [ ] RL-008 — Deployment-specific process or port-binding failure.
+8. [x] RL-008 — Deployment-specific process or port-binding failure.
 
-Only one incident may be active at a time. Exact injected causes are intentionally omitted.
+The current incident backlog is complete. Add and authorize a new backlog before
+starting another incident. Exact injected causes remain documented only in the
+incident artifacts and history.
