@@ -1,26 +1,31 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 28
-- State: MERGED
-- Incident: RL-005
-- Branch: main
+- Sequence: 29
+- State: READY_FOR_DIAGNOSIS
+- Incident: RL-006
+- Branch: incident/rl-006
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
+- Next actor: LOCAL_CODEX
 - Updated: 2026-08-24
 - Control keyword: cfgh
-- Pull request: https://github.com/dany-aspire/rescuelab/pull/5
-- Merge commit: 425d7d61395cecd9bfaeaea698e5cf6ed824ced7
-- Learner merge approval: recorded
-- Continuation: preparing RL-006
+- Last completed incident: RL-005
+- Last pull request: https://github.com/dany-aspire/rescuelab/pull/5
+- Last merge commit: 425d7d61395cecd9bfaeaea698e5cf6ed824ced7
+- Active handoff: incident/rl-006:handoffs/CURRENT.md
+- Continuation: automatic
 
 ## Instruction
 
-RL-005 was merged after diagnosis, repair approval, complete verification, independent review, and explicit learner merge approval. ChatGPT Work is authorized by the automatic-continuation rule to prepare RL-006 immediately.
+This file on `main` is the canonical handoff router. RL-006 is active on `incident/rl-006`.
 
-## Evidence
+Fetch `origin`, then read `handoffs/CURRENT.md`, `tasks/CURRENT.md`, and `AGENTS.md` from `origin/incident/rl-006`. Follow that branch mailbox only if its sequence and incident match this router and it names the receiving agent as `Next actor`.
 
-- `docs/incidents/RL-005-diagnosis.md`
-- `docs/incidents/RL-005-report.md`
-- `reviews/RL-005.md`
-- Pull request: <https://github.com/dany-aspire/rescuelab/pull/5>
+The current authorized stage is diagnosis only. Do not modify `main`.
+
+## Pointer
+
+- Active branch: `incident/rl-006`
+- Active mailbox: `incident/rl-006:handoffs/CURRENT.md`
+- Task: `incident/rl-006:tasks/CURRENT.md`
+- Ticket: `incident/rl-006:tasks/incidents/RL-006.md`
