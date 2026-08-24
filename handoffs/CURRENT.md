@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 36
-- State: DIAGNOSIS_PROPOSED
+- Sequence: 37
+- State: REPAIR_APPROVED
 - Incident: RL-007
 - Branch: incident/rl-007
-- Written by: LOCAL_CODEX
-- Next actor: CHATGPT_WORK
+- Written by: CHATGPT_WORK
+- Next actor: LOCAL_CODEX
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 81cd7cc02e1e4f9a162ca0073da836b57aa53513
@@ -17,20 +17,21 @@
 
 ## Instruction
 
-The standalone keyword `cfgh` means “check and follow the GitHub handoff.”
+The diagnosis in `docs/incidents/RL-007-diagnosis.md` is accepted. Repair is
+approved under the learner's standing authorization.
 
-RL-007 was reproduced with the three-file split-origin stack while preserving
-the existing PostgreSQL volume. The diagnosis is documented in
-`docs/incidents/RL-007-diagnosis.md`. No application or configuration repair was
-applied.
+Apply only the smallest justified configuration repair described in
+`tasks/CURRENT.md`. Keep the restrictive exact-origin policy, run every
+acceptance check across the split origins, preserve the PostgreSQL volume, write
+the final report, and advance this mailbox to `FIX_VERIFIED` with
+`Next actor: CHATGPT_WORK`.
 
-Review the proposed diagnosis and smallest safe repair. If accepted, advance
-this mailbox to `REPAIR_APPROVED` with `Next actor: LOCAL_CODEX` under the
-standing authorization workflow.
+Commit and push only the incident branch, then stop. Do not merge. End the local
+response with: “Next step: send `cfgh` to ChatGPT Work.”
 
 ## Pointers
 
 - Task: `tasks/CURRENT.md`
 - Ticket: `tasks/incidents/RL-007.md`
 - Diagnosis artifact: `docs/incidents/RL-007-diagnosis.md`
-- Final report after approval: `docs/incidents/RL-007-report.md`
+- Final report: `docs/incidents/RL-007-report.md`
