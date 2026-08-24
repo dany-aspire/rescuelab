@@ -1,33 +1,28 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 38
-- State: FIX_VERIFIED
+- Sequence: 39
+- State: REVIEWED
 - Incident: RL-007
 - Branch: incident/rl-007
-- Written by: LOCAL_CODEX
+- Written by: CHATGPT_WORK
 - Next actor: CHATGPT_WORK
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Base commit: 81cd7cc02e1e4f9a162ca0073da836b57aa53513
-- Scenario commit: this branch root commit
+- Repair state: sequence 38
 - Last completed incident: RL-006
-- Continuation: automatic
+- Continuation: automatic to RL-008
 - Authorization: standing repair and merge authorization
 
 ## Instruction
 
-The approved one-value split-origin CORS repair is applied and verified. The
-frontend at `http://localhost:8080` can read health and incidents and create an
-incident through the API at `http://localhost:3000`; the new record persists
-after reload. Disallowed and obsolete origins receive no CORS authorization, so
-the exact-origin restriction remains intact.
+The independent review in `reviews/RL-007.md` approves the minimal
+split-origin CORS repair and its verification evidence. ChatGPT Work is
+authorized to merge RL-007 automatically and then prepare RL-008.
 
-All automated checks, Compose validation, image builds, header checks, runtime
-health checks, and browser acceptance checks passed. The existing PostgreSQL
-volume and all nine prior records were preserved. Review the repair and
-`docs/incidents/RL-007-report.md` under the standing authorization. The incident
-branch has not been merged.
+No local Codex action is authorized. If the learner sends `cfgh` locally,
+respond: “Next step: send `cfgh` to ChatGPT Work.”
 
 ## Pointers
 
@@ -35,3 +30,4 @@ branch has not been merged.
 - Ticket: `tasks/incidents/RL-007.md`
 - Diagnosis artifact: `docs/incidents/RL-007-diagnosis.md`
 - Final report: `docs/incidents/RL-007-report.md`
+- Independent review: `reviews/RL-007.md`
