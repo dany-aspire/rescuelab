@@ -1,16 +1,16 @@
 # Current Task
 
-Status: ASSIGNED
+Status: REVIEWED
 
 ## P2-006 — Diagnosis-to-delivery playbook
 
-Create a client-facing engagement workflow and reusable delivery-report template.
+The client-facing playbook and delivery-report template are complete and independently reviewed.
 
-- Actor: `CODEX_EXECUTOR`
-- Execution surface: `CODEX_CLOUD`
 - Branch: `phase-2/p2-006`
-- Task: `tasks/phase-2/P2-006.md`
+- Pull request: #17
 - Deliverables: `docs/delivery-playbook.md`, `templates/delivery-report.md`
-- Application changes: not authorized
-- Merge owner: `CHATGPT_WORK`
-- Delivery: complete file contents in PR #17; no Git push required
+- Review: `reviews/P2-006.md`
+- Decision: approved under the learner's standing merge authorization
+- Application changes: none
+
+After merge, ChatGPT Work must immediately prepare P2-007 and route it to Codex cloud.
