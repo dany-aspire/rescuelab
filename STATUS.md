@@ -10,6 +10,7 @@
 - Completed Phase 2 tasks: P2-001 portfolio evidence audit.
 - Completed Phase 2 tasks: P2-001 portfolio evidence audit; P2-002 incident case-study index.
 - Completed Phase 2 tasks: P2-001 portfolio evidence audit; P2-002 incident case-study index; P2-003 client-facing README.
+- Current task: P2-004 reproducible demonstration is assigned to Codex cloud.
 - Active incident: none.
-- Workflow state: P2-003 independently reviewed and approved for merge.
+- Workflow state: P2-004 assigned.
 - Coordination: GitHub-native Protocol 2 with the `CODEX_EXECUTOR` role, Codex cloud as the default execution surface, control-room issue #9, and standing repair/merge authorization; use `cfgh`.
