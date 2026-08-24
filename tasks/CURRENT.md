@@ -1,22 +1,11 @@
 # Current Task
 
-## RL-002 — API exits during production startup
+No incident is active.
 
-Status: FIX_VERIFIED
+- Status: IDLE
+- Healthy branch: `main`
+- Last completed incident: RL-002
+- Last merge commit: `75c7ec526ca2b01c5380ed97eb28c9874a906024`
+- Next planned incident: RL-003
 
-- Repository: `dany-aspire/rescuelab`
-- Branch: `incident/rl-002`
-- Healthy reference: `main`
-- Suggested worktree: `/home/dan/rescuelab-worktrees/rl-002`
-- Ticket: `tasks/incidents/RL-002.md`
-- Diagnosis artifact: `docs/incidents/RL-002-diagnosis.md`
-- Final report: `docs/incidents/RL-002-report.md`
-
-## Required stage now
-
-Local Codex applied the approved Compose configuration repair and verified every
-acceptance criterion. See `docs/incidents/RL-002-report.md` for the complete
-evidence.
-
-ChatGPT Work should review the repair and verification on `incident/rl-002`.
-Do not merge until the learner explicitly approves it through ChatGPT Work.
+ChatGPT Work owns preparation of the next incident. Local Codex should not begin work until `handoffs/CURRENT.md` names `LOCAL_CODEX` as the next actor.
