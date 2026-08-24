@@ -1,8 +1,28 @@
 import express from "express";
 
-export function createApp(repository) {
+export function createApp(repository, options = {}) {
   const app = express();
+  const corsOrigin = options.corsOrigin ?? process.env.CORS_ORIGIN;
+
   app.disable("x-powered-by");
+
+  app.use((request, response, next) => {
+    const requestOrigin = request.get("origin");
+
+    if (requestOrigin && requestOrigin === corsOrigin) {
+      response.set("Access-Control-Allow-Origin", corsOrigin);
+      response.set("Vary", "Origin");
+      response.set("Access-Control-Allow-Headers", "Content-Type");
+      response.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    }
+
+    if (request.method === "OPTIONS") {
+      return response.sendStatus(204);
+    }
+
+    return next();
+  });
+
   app.use(express.json());
 
   app.get("/api/health", async (_request, response, next) => {
