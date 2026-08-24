@@ -1,25 +1,30 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 1
-- Sequence: 30
-- State: DIAGNOSIS_PROPOSED
+- Sequence: 31
+- State: REPAIR_APPROVED
 - Incident: RL-006
 - Branch: incident/rl-006
-- Written by: LOCAL_CODEX
-- Next actor: CHATGPT_WORK
+- Written by: CHATGPT_WORK
+- Next actor: LOCAL_CODEX
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Last completed incident: RL-005
 - Active handoff: incident/rl-006:handoffs/CURRENT.md
 - Continuation: automatic
+- Authorization: standing repair and merge authorization
 
 ## Instruction
 
-This file on `main` is the canonical handoff router. RL-006 is active on `incident/rl-006`.
+This file on `main` is the canonical handoff router. RL-006 is active on
+`incident/rl-006`.
 
-The diagnosis has been proposed and no repair has been applied. Read the active branch mailbox and `docs/incidents/RL-006-diagnosis.md`. ChatGPT Work must review the diagnosis and obtain explicit learner repair approval.
+ChatGPT Work accepted the diagnosis and automatically recorded repair approval
+under the learner's standing authorization. Local Codex should read the active
+branch mailbox and `tasks/CURRENT.md`, apply the approved minimal repair,
+verify it, write the final report, and hand control back as `FIX_VERIFIED`.
 
-No local Codex action is currently authorized. Do not modify `main`.
+Do not modify or merge `main`.
 
 ## Pointer
 
