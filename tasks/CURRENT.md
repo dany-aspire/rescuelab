@@ -2,7 +2,7 @@
 
 ## RL-002 — API exits during production startup
 
-Status: REPAIR_APPROVED
+Status: FIX_VERIFIED
 
 - Repository: `dany-aspire/rescuelab`
 - Branch: `incident/rl-002`
@@ -14,10 +14,9 @@ Status: REPAIR_APPROVED
 
 ## Required stage now
 
-The learner approved the RL-002 repair after ChatGPT Work reviewed the diagnosis.
+Local Codex applied the approved Compose configuration repair and verified every
+acceptance criterion. See `docs/incidents/RL-002-report.md` for the complete
+evidence.
 
-Follow `AGENTS.md` and `handoffs/CURRENT.md`. Apply the smallest repair justified in `docs/incidents/RL-002-diagnosis.md`: explicitly supply the API's required `DATABASE_URL` through Compose using the repository's documented environment workflow, with a clear failure when the required value is missing.
-
-Do not commit secrets or delete/reset the PostgreSQL volume. Run every acceptance check in `tasks/incidents/RL-002.md`, including backend tests, frontend build, Compose validation, full-stack health, existing-data loading, and browser creation/refresh persistence.
-
-Write `docs/incidents/RL-002-report.md`, update repository status accurately, then update the mailbox to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`. Commit and push only `incident/rl-002`, then stop.
+ChatGPT Work should review the repair and verification on `incident/rl-002`.
+Do not merge until the learner explicitly approves it through ChatGPT Work.
