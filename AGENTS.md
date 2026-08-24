@@ -59,4 +59,10 @@ After approval:
 - Commit and push only the incident branch, then stop.
 - Do not merge unless the learner explicitly authorizes it through ChatGPT Work.
 
+## Automatic continuation
+
+After an incident is merged and completion records are updated, `CHATGPT_WORK` immediately prepares the next unchecked incident in `tasks/BACKLOG.md` and routes the canonical mailbox to it. A separate learner command to start the next incident is not required.
+
+This continuation rule does not bypass diagnosis, repair, review, or merge approval gates.
+
 Never expose secrets, weaken tests, or claim success without runtime verification. Ask before destructive or scope-expanding actions.
