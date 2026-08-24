@@ -12,7 +12,7 @@ When `cfgh` is received:
 2. Read the canonical `handoffs/CURRENT.md` from GitHub, then read the branch and task it names.
 3. If `Next actor` names the receiving agent, follow the current stage instructions.
 4. If another actor is named, report the current state and next actor, then stop.
-5. Do not infer work from an earlier transcript or treat `cfgh` as authorization to bypass diagnosis, repair, review, or merge gates.
+5. Do not infer work from an earlier transcript or treat `cfgh` as authorization to bypass diagnosis or independent review gates.
 
 ## Startup procedure
 
@@ -45,9 +45,11 @@ Before changing application code or configuration:
 
 Do not compare the incident branch with `main`, inspect the incident-creation commit diff, or use repository history to reveal the injected change before completing the evidence-based diagnosis.
 
-## Repair gate
+## Standing authorization and repair gate
 
-Do not repair until GitHub contains `State: REPAIR_APPROVED` and `Next actor: LOCAL_CODEX` for the same incident and sequence lineage.
+The learner has granted standing authorization for routine repairs and merges that pass the workflow gates. ChatGPT Work records these approvals in GitHub without asking the learner each time.
+
+Do not repair until GitHub contains `State: REPAIR_APPROVED` and `Next actor: LOCAL_CODEX` for the same incident and sequence lineage. ChatGPT Work may record that state automatically only after accepting the evidence-based diagnosis and smallest safe fix.
 
 After approval:
 
@@ -57,12 +59,14 @@ After approval:
 - Update task and status files accurately.
 - Update `handoffs/CURRENT.md` to `FIX_VERIFIED` with `Next actor: CHATGPT_WORK`.
 - Commit and push only the incident branch, then stop.
-- Do not merge unless the learner explicitly authorizes it through ChatGPT Work.
+- Do not merge. ChatGPT Work owns the independent review and merge.
+
+After `FIX_VERIFIED`, ChatGPT Work independently reviews the repair and verification evidence. If the review passes, it records the review and merges automatically under the learner's standing authorization. If the review fails or is uncertain, it stops and reports the blocker instead of merging.
 
 ## Automatic continuation
 
 After an incident is merged and completion records are updated, `CHATGPT_WORK` immediately prepares the next unchecked incident in `tasks/BACKLOG.md` and routes the canonical mailbox to it. A separate learner command to start the next incident is not required.
 
-This continuation rule does not bypass diagnosis, repair, review, or merge approval gates.
+This continuation rule does not bypass diagnosis or independent review gates.
 
 Never expose secrets, weaken tests, or claim success without runtime verification. Ask before destructive or scope-expanding actions.
