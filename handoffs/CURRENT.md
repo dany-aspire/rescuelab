@@ -1,12 +1,12 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 63
-- State: WORK_PROPOSED
+- Sequence: 64
+- State: REVIEWED
 - Incident: none
 - Task: P2-005
 - Branch: phase-2/p2-005
-- Written by: CODEX_EXECUTOR
+- Written by: CHATGPT_WORK
 - Next actor: CHATGPT_WORK
 - Execution surface: none
 - Updated: 2026-08-24
@@ -44,7 +44,8 @@ uncertain, record the specific blocker and do not merge.
 - Task: `tasks/phase-2/P2-005.md`
 - Current task: `tasks/CURRENT.md`
 - README: `README.md`
-- Proposed guide: `docs/client-intake.md`
-- Proposed template: `templates/client-intake.md`
+- Guide: `docs/client-intake.md`
+- Template: `templates/client-intake.md`
+- Review: `reviews/P2-005.md`
 - Pull request: #16
 - Control room: GitHub issue #9
