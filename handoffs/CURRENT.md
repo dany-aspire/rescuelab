@@ -1,21 +1,21 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 64
-- State: REVIEWED
+- Sequence: 65
+- State: TASK_ASSIGNED
 - Incident: none
-- Task: P2-005
-- Branch: phase-2/p2-005
+- Task: P2-006
+- Branch: phase-2/p2-006
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
-- Execution surface: none
+- Next actor: CODEX_EXECUTOR
+- Execution surface: CODEX_CLOUD
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
-- Active pull request: #16
-- Last completed task: P2-004
-- Last merge PR: #15
-- Last merge commit: 98930527d75465f20c352962451013f3722428a8
+- Active pull request: #17
+- Last completed task: P2-005
+- Last merge PR: #16
+- Last merge commit: adc3c6f0aa7f15aa548042db9f0f796eab3fca3b
 - Continuation: automatic after independent review
 - Authorization: standing repair and merge authorization
 - Executor preference: Codex cloud for all tasks until learner changes it
@@ -23,29 +23,18 @@
 
 ## Instruction
 
-Independently review the complete comment-based P2-005 proposal in pull request
-#16 against `tasks/phase-2/P2-005.md`, `docs/PHASE-2.md`, and `README.md`.
+Perform P2-006 exactly as specified in `tasks/phase-2/P2-006.md`. Create the
+client-facing delivery playbook and report template without changing application
+code, README, or historical incident artifacts.
 
-Confirm that the proposed guide and template are plain-language,
-least-privilege, portfolio-safe, complete, and free of credentials, personal
-paths, pricing, proposal strategy, and private marketplace data. Confirm that
-the access, secret-redaction, backup, rollback, approval, decline, and
-escalation boundaries are safe and match the authorized small-app deployment
-scope.
-
-If the review passes, apply the proposed files through the repository workflow,
-record the review result, merge under the standing authorization, update the
-completion records, and route the next Phase 2 task. If the review fails or is
-uncertain, record the specific blocker and do not merge.
+Use complete comment-based delivery in pull request #17, then stop for independent review.
 
 ## Pointers
 
 - Phase definition: `docs/PHASE-2.md`
-- Task: `tasks/phase-2/P2-005.md`
+- Task: `tasks/phase-2/P2-006.md`
 - Current task: `tasks/CURRENT.md`
-- README: `README.md`
-- Guide: `docs/client-intake.md`
-- Template: `templates/client-intake.md`
-- Review: `reviews/P2-005.md`
-- Pull request: #16
+- Intake guide: `docs/client-intake.md`
+- Deliverables: `docs/delivery-playbook.md`, `templates/delivery-report.md`
+- Pull request: #17
 - Control room: GitHub issue #9
