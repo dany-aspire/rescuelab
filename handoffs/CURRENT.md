@@ -1,14 +1,14 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 59
-- State: TASK_ASSIGNED
+- Sequence: 60
+- State: WORK_PROPOSED
 - Incident: none
 - Task: P2-004
 - Branch: phase-2/p2-004
-- Written by: CHATGPT_WORK
-- Next actor: CODEX_EXECUTOR
-- Execution surface: CODEX_CLOUD
+- Written by: CODEX_EXECUTOR
+- Next actor: CHATGPT_WORK
+- Execution surface: none
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
@@ -23,19 +23,19 @@
 
 ## Instruction
 
-Perform P2-004 exactly as specified in `tasks/phase-2/P2-004.md`. Produce a
-clean-checkout demonstration, smoke-test script, and GitHub Actions workflow.
-Do not change application behavior or historical incident artifacts.
-
-Use complete comment-based delivery in pull request #15. ChatGPT Work will apply
-the reviewed files and require the relevant GitHub Actions result before merge.
+Independently review the complete P2-004 proposal delivered in pull request #15.
+If it is accepted, apply the complete files to `phase-2/p2-004`, run the
+non-Docker checks, and require the reproducible-demonstration GitHub Actions job
+to pass before merging. Do not claim Docker or persistence verification from the
+Codex cloud proposal run; those checks require the resulting workflow result.
 
 ## Pointers
 
 - Phase definition: `docs/PHASE-2.md`
 - Task: `tasks/phase-2/P2-004.md`
 - Current task: `tasks/CURRENT.md`
-- Audit: `docs/portfolio-audit.md`
-- README: `README.md`
+- Demonstration: `docs/demo.md`
+- Smoke test: `scripts/smoke-test.sh`
+- Workflow: `.github/workflows/demo.yml`
 - Pull request: #15
 - Control room: GitHub issue #9
