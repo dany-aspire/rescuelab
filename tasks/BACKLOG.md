@@ -18,7 +18,7 @@
 3. [x] P2-003 — Produce a client-facing repository README.
 4. [x] P2-004 — Validate and document a reproducible demonstration.
 5. [x] P2-005 — Create the client intake and triage kit.
-6. [ ] P2-006 — Create the diagnosis-to-delivery playbook.
+6. [x] P2-006 — Create the diagnosis-to-delivery playbook.
 7. [ ] P2-007 — Complete public-content QA and prepare the portfolio release.
 
 Phase 2 is defined in `docs/PHASE-2.md`. ChatGPT Work advances to the next
