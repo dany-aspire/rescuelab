@@ -1,39 +1,37 @@
 # RescueLab GitHub Handoff
 
 - Protocol: 2
-- Sequence: 49
-- State: PHASE_2_DEFINED
+- Sequence: 50
+- State: TASK_ASSIGNED
 - Incident: none
-- Task: Phase 2 definition
-- Branch: phase-2/definition
+- Task: P2-001
+- Branch: phase-2/p2-001
 - Written by: CHATGPT_WORK
-- Next actor: CHATGPT_WORK
-- Execution surface: none
+- Next actor: CODEX_EXECUTOR
+- Execution surface: CODEX_CLOUD
 - Updated: 2026-08-24
 - Control keyword: cfgh
 - Control room: GitHub issue #9
 - Last completed incident: RL-008
-- Last merge PR: #10
-- Last merge commit: c2a8687911ee16c35a644c8cfdacf556c28c89a5
-- Continuation: automatic to P2-001 after reviewed merge
+- Last merge PR: #11
+- Last merge commit: 9308c455233109e3b06b8b1af07d6e5c403eb39a
+- Continuation: automatic after independent review
 - Authorization: standing repair and merge authorization
 
 ## Instruction
 
-Phase 2 is defined as portfolio and client readiness. The seven-task backlog,
-scope boundary, quality gates, and exit criteria are recorded in
-`docs/PHASE-2.md` and `tasks/BACKLOG.md`.
+Perform P2-001 exactly as specified in `tasks/phase-2/P2-001.md`. Produce the
+portfolio evidence audit without changing application code, rewriting existing
+incident artifacts, or merging the branch.
 
-ChatGPT Work must independently review and merge the definition, create the
-P2-001 task branch and pull request, update the canonical router, and trigger
-Codex cloud through GitHub issue #9. No Codex executor work is authorized by
-this sequence.
+When complete, update this branch handoff to `WORK_PROPOSED` with
+`Next actor: CHATGPT_WORK` and `Execution surface: none`, commit and push,
+report the result in the pull request, and stop.
 
 ## Pointers
 
 - Phase definition: `docs/PHASE-2.md`
-- Backlog: `tasks/BACKLOG.md`
+- Task: `tasks/phase-2/P2-001.md`
 - Current task: `tasks/CURRENT.md`
-- Status: `STATUS.md`
-- Agent contract: `AGENTS.md`
+- Deliverable: `docs/portfolio-audit.md`
 - Control room: GitHub issue #9
