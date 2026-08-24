@@ -6,9 +6,14 @@ The planned RL-001 through RL-008 incident backlog is complete. Every incident
 was diagnosed before repair, independently reviewed, and merged into `main`
 through a pull request.
 
-No incident branch is active and no local Codex action is authorized. The next
-task requires learner direction: review the portfolio, publish a release, or
-define a new RescueLab phase and backlog.
+No incident branch is active and no Codex executor action is authorized. The
+next task requires learner direction: review the portfolio, publish a release,
+or define a new RescueLab phase and backlog.
+
+Future incidents default to the `CODEX_CLOUD` execution surface. Use
+`LOCAL_CODEX` only when the task requires the learner's exact machine or a
+local-only environment. GitHub issue #9 is the cloud control room;
+`handoffs/CURRENT.md` remains authoritative.
 
 ## Completed final incident
 
